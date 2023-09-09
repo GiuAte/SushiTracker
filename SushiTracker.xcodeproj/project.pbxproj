@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
+		C33D301D2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
+		C33D301E2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
+		C33D30282AACD1830039B426 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30272AACD1830039B426 /* PersistenceController.swift */; };
+		C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30292AACDCDE0039B426 /* RestaurantItem.swift */; };
+		C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */; };
+		C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */; };
+		C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextField.swift */; };
+		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
+		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
 		C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */; };
 		C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A102AA9BB2C00561D26 /* ContentView.swift */; };
 		C3947A132AA9BB2D00561D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3947A122AA9BB2D00561D26 /* Assets.xcassets */; };
@@ -14,6 +24,9 @@
 		C3947A202AA9BB2D00561D26 /* SushiTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A1F2AA9BB2D00561D26 /* SushiTrackerTests.swift */; };
 		C3947A2A2AA9BB2D00561D26 /* SushiTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A292AA9BB2D00561D26 /* SushiTrackerUITests.swift */; };
 		C3947A2C2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A2B2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift */; };
+		C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */; };
+		C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */; };
+		C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SushiDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C33D30272AACD1830039B426 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		C33D30292AACDCDE0039B426 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
+		C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModel.swift; sourceTree = "<group>"; };
+		C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
+		C33D30382AACF3AE0039B426 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C33D303A2AACF9960039B426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerApp.swift; sourceTree = "<group>"; };
 		C3947A102AA9BB2C00561D26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +66,9 @@
 		C3947A252AA9BB2D00561D26 /* SushiTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A292AA9BB2D00561D26 /* SushiTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerUITests.swift; sourceTree = "<group>"; };
 		C3947A2B2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
+		C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +96,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C33D302B2AACE19E0039B426 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */,
+				C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */,
+				C3947A102AA9BB2C00561D26 /* ContentView.swift */,
+				C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */,
+				C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C33D302C2AACE1F10039B426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C33D30272AACD1830039B426 /* PersistenceController.swift */,
+				C33D30292AACDCDE0039B426 /* RestaurantItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C33D302D2AACE2140039B426 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */,
+				C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C3947A022AA9BB2C00561D26 = {
 			isa = PBXGroup;
 			children = (
+				C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */,
 				C3947A0D2AA9BB2C00561D26 /* SushiTracker */,
 				C3947A1E2AA9BB2D00561D26 /* SushiTrackerTests */,
 				C3947A282AA9BB2D00561D26 /* SushiTrackerUITests */,
@@ -94,10 +150,15 @@
 		C3947A0D2AA9BB2C00561D26 /* SushiTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C33D303A2AACF9960039B426 /* Info.plist */,
+				C33D302D2AACE2140039B426 /* ViewModel */,
+				C33D302C2AACE1F10039B426 /* Model */,
+				C33D302B2AACE19E0039B426 /* Views */,
 				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
-				C3947A102AA9BB2C00561D26 /* ContentView.swift */,
 				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
+				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
+				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
 			);
 			path = SushiTracker;
 			sourceTree = "<group>";
@@ -257,7 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */,
+				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
+				C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */,
+				C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */,
+				C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */,
+				C33D30282AACD1830039B426 /* PersistenceController.swift in Sources */,
 				C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */,
+				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
+				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
+				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
+				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
+				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
 				C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D301D2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C3947A202AA9BB2D00561D26 /* SushiTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3947A2C2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift in Sources */,
+				C33D301E2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C3947A2A2AA9BB2D00561D26 /* SushiTrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,11 +494,13 @@
 				DEVELOPMENT_TEAM = Q7W3VFRJN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SushiTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +525,13 @@
 				DEVELOPMENT_TEAM = Q7W3VFRJN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SushiTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +661,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */,
+			);
+			currentVersion = C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */;
+			path = SushiDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3947A032AA9BB2C00561D26 /* Project object */;
 }
