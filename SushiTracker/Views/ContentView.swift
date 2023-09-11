@@ -16,16 +16,20 @@ struct ContentView: View {
         animation: .default)
     private var restaurants: FetchedResults<RestaurantItem>
     
+    @State private var isSearchBarVisible = false
+    @State private var lastOffset: CGFloat = 0.0
     @State private var showingRestaurantPopup = false
     @State private var searchText = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("🍣 SushiTracker")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(Color.black)
+                HStack{
+                    Text("Home")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(Color.black)
+                }
                 
                 if restaurants.isEmpty {
                     Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
@@ -48,8 +52,6 @@ struct ContentView: View {
                                 .onDelete(perform: deleteRestaurant)
                             }
                             .background(Color.yellow)
-                        } else {
-                            Color.yellow
                         }
                     }
                 }
@@ -95,6 +97,17 @@ struct ContentView: View {
             return restaurants.filter { restaurant in
                 restaurant.name!.localizedCaseInsensitiveContains(searchText)
             }
+        }
+    }
+    
+    func shouldShowSearchBarOnScroll(offset: CGFloat) -> Bool {
+        let scrollThreshold: CGFloat = 20.0 // Puoi personalizzare questo valore a tuo piacimento
+        
+        // Controlla se lo scroll è verso il basso (offset positivo) e supera la soglia
+        if offset > scrollThreshold {
+            return true
+        } else {
+            return false
         }
     }
 }

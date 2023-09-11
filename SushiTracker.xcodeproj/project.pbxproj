@@ -27,6 +27,7 @@
 		C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */; };
 		C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */; };
 		C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */; };
+		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
 		C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRowView.swift; sourceTree = "<group>"; };
+		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
 				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
+				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
 			);
 			path = SushiTracker;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */,
 				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
 				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
+				C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */,
 				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
 				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
@@ -495,6 +499,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SushiTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SushiMe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,6 +532,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SushiTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SushiMe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

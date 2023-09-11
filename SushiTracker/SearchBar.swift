@@ -16,7 +16,7 @@ struct SearchBar: View {
                 TextField("Cerca un ristorante", text: $text)
                     .padding(.vertical, 8)
                     .padding(.leading, 50)
-                    .background(Color(.systemGray6))
+                    .background(Color(.white))
                     .cornerRadius(10)
                     .padding(.horizontal)
                 
