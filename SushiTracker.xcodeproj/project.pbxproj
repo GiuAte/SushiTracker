@@ -17,6 +17,7 @@
 		C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextField.swift */; };
 		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
+		C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */; };
 		C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */; };
 		C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A102AA9BB2C00561D26 /* ContentView.swift */; };
 		C3947A132AA9BB2D00561D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3947A122AA9BB2D00561D26 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		C33D303A2AACF9960039B426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
+		C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandling.swift; sourceTree = "<group>"; };
 		C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerApp.swift; sourceTree = "<group>"; };
 		C3947A102AA9BB2C00561D26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
 				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
 				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
+				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
 			);
 			path = SushiTracker;
 			sourceTree = "<group>";
@@ -277,6 +280,9 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				de,
+				es,
 			);
 			mainGroup = C3947A022AA9BB2C00561D26;
 			productRefGroup = C3947A0C2AA9BB2C00561D26 /* Products */;
@@ -333,6 +339,7 @@
 				C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */,
 				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
+				C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */,
 				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
 				C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */,
 			);

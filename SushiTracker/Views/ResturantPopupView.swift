@@ -12,22 +12,21 @@ import MapKit
 struct RestaurantPopupView: View {
     
     enum Field {
-        case name, address
+        case name, address, none
     }
     
     @ObservedObject var model: RestaurantModel
     @Binding var isPresented: Bool
     @Environment(\.managedObjectContext) private var viewContext
-    
     @State private var selectedRating = 0
     @State private var showAlert = false
-    
     @State private var restaurantName = ""
     @State private var restaurantAddress = ""
-    
     @State private var restaurantLocation: CLLocationCoordinate2D?
-    
+    @State private var region: MKCoordinateRegion? = nil
+    @State private var mapUpdateTimer: Timer?
     @FocusState private var focusField: Field?
+    @FocusState private var isFocus: Bool
     
     var body: some View {
         ZStack {
@@ -41,27 +40,27 @@ struct RestaurantPopupView: View {
                         .font(.title)
                     
                 }
-                
-                
-                VStack(alignment: .leading) {
-                    Text("🍣 Nome")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
-                        .bold()
-                    
-                    TextField("", text: $restaurantName)
-                        .padding(15)
-                        .background(Color(.systemGray6))
-                        .disableAutocorrection(true)
-                        .submitLabel(.next)
-                        .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .focused($focusField, equals: .name)
-                        .onSubmit {
-                            focusField = .address
-                        }
-                        .shadow(radius: 10)
+                ZStack {
+                    Rectangle()
+                        .fill(Color.yellow)
+                    VStack(alignment: .leading) {
+                        Text("🍣 Nome")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                            .bold()
+                        
+                        TextField("", text: $restaurantName)
+                            .padding(15)
+                            .background(Color(.systemGray6))
+                            .disableAutocorrection(true)
+                            .submitLabel(.next)
+                            .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .focused($isFocus)
+                            .shadow(radius: 10)
+                            
+                    }
+                    .padding(20)
                 }
-                .padding(20)
                 
                 VStack(alignment: .leading) {
                     Text("📍 Indirizzo")
@@ -73,30 +72,28 @@ struct RestaurantPopupView: View {
                         .padding(15)
                         .disableAutocorrection(true)
                         .background(Color(.systemGray6))
-                        
                         .focused($focusField, equals: .address)
                         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .submitLabel(.done)
-                        .onSubmit {
-                            focusField = nil
-                        }
                         .onChange(of: restaurantAddress) { newValue in
-                            geocodeAddress()
+                            mapUpdateTimer?.invalidate()
+                            mapUpdateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                                geocodeAddress()
+                            }
                         }
                         .shadow(radius: 10)
                 }
                 .padding(20)
-
+                
                 HStack {
-                        MapView(coordinate: $restaurantLocation)
-                            .frame(height: 200)
-                            .cornerRadius(10)
-                            .padding(20)
-                            .background(Color.clear)
-                            .shadow(radius: 5)
-                    
+                    MapView(coordinate: $restaurantLocation, region: $region)
+                        .frame(height: 200)
+                        .cornerRadius(10)
+                        .padding(20)
+                        .background(Color.clear)
+                        .shadow(radius: 5)
                 }
-                                
+                
                 Picker("Valutazione", selection: $selectedRating) {
                     ForEach(1..<6, id: \.self) { rating in
                         if selectedRating >= rating {
@@ -121,7 +118,6 @@ struct RestaurantPopupView: View {
                             showAlert = true
                         } else {
                             let rating = selectedRating
-                            // Crea e salva un nuovo ristorante in Core Data
                             let newRestaurant = RestaurantItem(context: viewContext)
                             newRestaurant.name = restaurantName
                             newRestaurant.address = restaurantAddress
@@ -167,21 +163,20 @@ struct RestaurantPopupView: View {
         }
     }
     
-    func geocodeAddress() {
+    private func geocodeAddress() {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(restaurantAddress) { placemarks, error in
-            if let placemark = placemarks?.first {
-                if let location = placemark.location {
-                    restaurantLocation = location.coordinate
-                    
-                    // Aggiorna la vista principale in modo che la mappa si aggiorni
-                    DispatchQueue.main.async {
-                        self.viewContext.refreshAllObjects()
-                    }
-                }
-            } else {
-                // Gestisci l'errore di geocodifica
+            guard let placemark = placemarks?.first, let location = placemark.location else {
                 print("Errore durante la geocodifica: \(error?.localizedDescription ?? "Errore sconosciuto")")
+                return
+            }
+            restaurantLocation = location.coordinate
+            region = MKCoordinateRegion(
+                center: restaurantLocation ?? CLLocationCoordinate2D(latitude: 0, longitude: 0),
+                span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+            )
+            DispatchQueue.main.async {
+                self.viewContext.refreshAllObjects()
             }
         }
     }

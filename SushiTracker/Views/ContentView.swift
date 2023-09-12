@@ -24,7 +24,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack{
+                HStack {
                     Text("Home")
                         .font(.title3)
                         .bold()
@@ -32,47 +32,56 @@ struct ContentView: View {
                 }
                 
                 if restaurants.isEmpty {
-                    Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
-                        .foregroundColor(Color.black.opacity(0.5))
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding([.leading, .trailing], 20)
-                } else {
-                    SearchBar(text: $searchText)
-                    
-                    ZStack {
-                        if !filteredRestaurants.isEmpty {
-                            List {
-                                ForEach(filteredRestaurants, id: \.self) { restaurant in
-                                    NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
-                                        RestaurantRowView(restaurant: restaurant)
+                        Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
+                            .foregroundColor(Color.black.opacity(0.5))
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding([.leading, .trailing], 20)
+                    } else {
+                        SearchBar(text: $searchText)
+                        ZStack {
+                            if !filteredRestaurants.isEmpty {
+                                List {
+                                    ForEach(filteredRestaurants, id: \.self) { restaurant in
+                                        NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
+                                            RestaurantRowView(restaurant: restaurant)
+                                        }
                                     }
+                                    .onDelete(perform: deleteRestaurant)
                                 }
-                                .onDelete(perform: deleteRestaurant)
+                                .background(Color.yellow)
+                            } else if filteredRestaurants.isEmpty {
+                                Text("Nessun ristorante trovato")
+                                    .foregroundColor(Color.black.opacity(0.5))
+                                    .font(.headline)
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .padding([.leading, .trailing], 20)
+                            } else {
+                                Color.yellow
+                                
                             }
-                            .background(Color.yellow)
                         }
                     }
-                }
-                
-                Button(action: {
-                    withAnimation {
-                        showingRestaurantPopup.toggle()
+
+                    Button(action: {
+                        withAnimation {
+                            showingRestaurantPopup.toggle()
+                        }
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.system(size: 50))
+                            .foregroundColor(.black)
+                            .padding()
                     }
-                }) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 50))
-                        .foregroundColor(.black)
-                        .padding()
+                    .sheet(isPresented: $showingRestaurantPopup) {
+                        let restaurantModel = RestaurantModel()
+                        RestaurantPopupView(model: restaurantModel, isPresented: $showingRestaurantPopup).environment(\.managedObjectContext, viewContext)
+                    }
                 }
-                .sheet(isPresented: $showingRestaurantPopup) {
-                    let restaurantModel = RestaurantModel()
-                    RestaurantPopupView(model: restaurantModel, isPresented: $showingRestaurantPopup).environment(\.managedObjectContext, viewContext)
-                }
-            }
-            .scrollContentBackground(.hidden)
-            .background(Color.yellow)
+                .scrollContentBackground(.hidden)
+                .background(Color.yellow)
         }
     }
     
@@ -85,7 +94,6 @@ struct ContentView: View {
         do {
             try viewContext.save()
         } catch {
-            // Handle the Core Data save error
             print("Error saving context: \(error.localizedDescription)")
         }
     }
@@ -101,9 +109,7 @@ struct ContentView: View {
     }
     
     func shouldShowSearchBarOnScroll(offset: CGFloat) -> Bool {
-        let scrollThreshold: CGFloat = 20.0 // Puoi personalizzare questo valore a tuo piacimento
-        
-        // Controlla se lo scroll è verso il basso (offset positivo) e supera la soglia
+        let scrollThreshold: CGFloat = 20.0
         if offset > scrollThreshold {
             return true
         } else {
