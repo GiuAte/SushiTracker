@@ -15,6 +15,7 @@
 		C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */; };
 		C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */; };
 		C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextField.swift */; };
+		C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */; };
 		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
 		C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */; };
@@ -28,6 +29,9 @@
 		C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */; };
 		C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */; };
 		C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */; };
+		C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */; };
+		C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */; };
+		C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */; };
 		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,7 @@
 		C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
 		C33D30382AACF3AE0039B426 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C33D303A2AACF9960039B426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPopupViewModel.swift; sourceTree = "<group>"; };
 		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandling.swift; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
 		C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRowView.swift; sourceTree = "<group>"; };
+		C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDraggableView.swift; sourceTree = "<group>"; };
+		C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScontrinoView.swift; sourceTree = "<group>"; };
+		C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInsideScontrino.swift; sourceTree = "<group>"; };
 		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +116,8 @@
 				C3947A102AA9BB2C00561D26 /* ContentView.swift */,
 				C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */,
 				C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */,
+				C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */,
+				C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +136,7 @@
 			children = (
 				C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */,
 				C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */,
+				C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,11 +171,7 @@
 				C33D302B2AACE19E0039B426 /* Views */,
 				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
 				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
-				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
-				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
-				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
-				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
 			);
 			path = SushiTracker;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 		C3947A142AA9BB2D00561D26 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -192,6 +200,18 @@
 				C3947A2B2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift */,
 			);
 			path = SushiTrackerUITests;
+			sourceTree = "<group>";
+		};
+		C3AF010B2AB203EA007E9D35 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
+				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
+				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
+				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
+				C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */,
 				C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */,
+				C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */,
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
+				C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */,
 				C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */,
 				C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */,
 				C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */,
@@ -337,6 +360,7 @@
 				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
 				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
 				C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */,
+				C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */,
 				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
 				C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */,
@@ -508,11 +532,11 @@
 				INFOPLIST_FILE = SushiTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SushiMe;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consenti a $(PRODUCT_NAME) di accedere alla tua posizione per ottenere le informazioni dei ristoranti";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,11 +565,11 @@
 				INFOPLIST_FILE = SushiTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SushiMe;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Consenti a $(PRODUCT_NAME) di accedere alla tua posizione per ottenere le informazioni dei ristoranti";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
