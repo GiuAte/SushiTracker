@@ -33,6 +33,8 @@
 		C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */; };
 		C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */; };
 		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
+		C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = C3EA6F472AB31EF5009FF0BB /* FloatingButton */; };
+		C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,7 @@
 		C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScontrinoView.swift; sourceTree = "<group>"; };
 		C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInsideScontrino.swift; sourceTree = "<group>"; };
 		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
+		C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +175,7 @@
 				C33D302B2AACE19E0039B426 /* Views */,
 				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
 				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
+				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
 			);
 			path = SushiTracker;
@@ -179,7 +184,6 @@
 		C3947A142AA9BB2D00561D26 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -210,6 +214,7 @@
 				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
 				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
 				C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */,
+				C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -230,6 +235,9 @@
 			dependencies = (
 			);
 			name = SushiTracker;
+			packageProductDependencies = (
+				C3EA6F472AB31EF5009FF0BB /* FloatingButton */,
+			);
 			productName = SushiTracker;
 			productReference = C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +313,9 @@
 				es,
 			);
 			mainGroup = C3947A022AA9BB2C00561D26;
+			packageReferences = (
+				C3EA6F462AB31EF5009FF0BB /* XCRemoteSwiftPackageReference "FloatingButton" */,
+			);
 			productRefGroup = C3947A0C2AA9BB2C00561D26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +376,7 @@
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
 				C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */,
 				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
+				C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */,
 				C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3EA6F462AB31EF5009FF0BB /* XCRemoteSwiftPackageReference "FloatingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/FloatingButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3EA6F472AB31EF5009FF0BB /* FloatingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3EA6F462AB31EF5009FF0BB /* XCRemoteSwiftPackageReference "FloatingButton" */;
+			productName = FloatingButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */ = {

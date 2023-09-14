@@ -10,25 +10,37 @@ import SwiftUI
 struct ListInsideScontrino: View {
     var body: some View {
         VStack {
-                    Divider() // Linea divisoria
-
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("Sashimi")
-                            Spacer()
-                            Text("Porzioni:")
-                            Text("7")
-                        }
-                        HStack {
-                            Text("Hosomaki Tonno")
-                            Spacer()
-                            Text("Porzioni:")
-                            Text("3")
-                        }
+            ScrollView {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Sashimi")
+                        Divider()
+                        Text("A60")
+                            .bold()
+                        Spacer()
+                        Text("Porzioni:")
+                        Text("7")
                     }
-                    .padding(.horizontal)
-                    Spacer() // Spazio vuoto alla fine
+                    
+                    HStack {
+                        Text("Gunkan con roll di sashimi e salsa rosa e patatine fritte con ketchup")
+                            .truncationMode(.tail)
+                            .minimumScaleFactor(0.3)
+                            .lineLimit(3)
+                        Divider()
+                        Text("A720")
+                            .bold()
+                        Spacer()
+                        Text("Porzioni:")
+                        Text("3")
+                       
+                    }
+                    
                 }
+                .padding(.horizontal)
+                Spacer()
+            }
+        }
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.white)

@@ -33,58 +33,52 @@ struct RestaurantDetailView: View {
     
     var body: some View {
         
-            VStack {
-                Spacer(minLength: 30)
-                CustomDraggableView(dragOffset: $dragOffset, isDragging: $isDragging) {
-                    VStack {
+        VStack {
+            Spacer(minLength: 30)
+            CustomDraggableView(dragOffset: $dragOffset, isDragging: $isDragging) {
+                VStack {
+                    
+                    Text(viewModel.name)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
+                        .minimumScaleFactor(0.8)
+                    
+                    Text(viewModel.address)
+                        .font(.body)
+                        .fontWeight(.light)
+                        .frame(maxWidth: .infinity)
+                        .minimumScaleFactor(0.8)
+                    
+                    HStack {
+                        Text("\(viewModel.rating)/5")
+                            .font(.subheadline)
+                            .bold()
+                            .foregroundColor(.black)
                         
-                        Text(viewModel.name)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .minimumScaleFactor(0.8)
-                        
-                        Text(viewModel.address)
-                            .font(.body)
-                            .fontWeight(.light)
-                            .frame(maxWidth: .infinity)
-                            .minimumScaleFactor(0.8)
-                        
-                        HStack {
-                            Text("\(viewModel.rating)/5")
-                                .font(.subheadline)
-                                .bold()
-                                .foregroundColor(.black)
-                            
-                            Image(systemName: "star.fill")
-                                .foregroundColor(.black)
-                                .font(.system(size: 15))
-                        }
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.black)
+                            .font(.system(size: 15))
                     }
-                        VStack {
-                            Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: restaurantLocation, title: restaurantName)]) { annotation in
-                                MapMarker(coordinate: annotation.coordinate, tint: .blue)
-                            }
-                            .frame(width: 330,height: 150)
-                            .padding(20)
-                            .background(Color.clear)
-                            .shadow(radius: 5)
-                        
-                        ScontrinoView()
-                            .frame(width: 350, height: 400)
-                        }
-                        Button(action: {
-                            withAnimation {
-                                
-                            }
-                        }) {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.system(size: 50))
-                                .foregroundColor(.black)
-                                .padding()
-                        }
-                    Spacer()
                 }
+                VStack {
+                    Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: restaurantLocation, title: restaurantName)]) { annotation in
+                        MapMarker(coordinate: annotation.coordinate, tint: .red)
+                    }
+                    .frame(width: 330,height: 150)
+                    .padding(20)
+                    .background(Color.clear)
+                    .shadow(radius: 5)
+                    
+                    ScontrinoView()
+                        .frame(width: 350, height: 400)
+                }
+                HStack {
+                    Spacer()
+                    FloatingButtonView()
+                }
+                .padding()
+            }
         }
         .background(Color.yellow)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

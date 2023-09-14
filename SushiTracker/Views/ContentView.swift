@@ -19,6 +19,7 @@ struct ContentView: View {
     @State private var lastOffset: CGFloat = 0.0
     @State private var showingRestaurantPopup = false
     @State private var searchText = ""
+    @State private var open = false
     
     var body: some View {
         NavigationView {
@@ -69,10 +70,14 @@ struct ContentView: View {
                         showingRestaurantPopup.toggle()
                     }
                 }) {
-                    Image(systemName: "plus.circle.fill")
+                    Image(systemName: "plus")
                         .font(.system(size: 50))
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .padding()
+                        .background(Color.pink)
+                        .mask(Circle())
+                        .shadow(radius: 5)
+                        .zIndex(10)
                 }
                 .fullScreenCover(isPresented: $showingRestaurantPopup) {
                     let restaurantModel = RestaurantModel()
