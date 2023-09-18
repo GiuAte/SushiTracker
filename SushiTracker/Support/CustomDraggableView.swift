@@ -22,7 +22,7 @@ struct CustomDraggableView<Content: View>: View {
 
     var body: some View {
         content
-            .offset(x: dragOffset.width)
+            .offset(x: dragOffset.width, y: dragOffset.height)
             .gesture(
                 DragGesture()
                     .onChanged { value in

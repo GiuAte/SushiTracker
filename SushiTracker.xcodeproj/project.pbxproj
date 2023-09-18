@@ -14,7 +14,7 @@
 		C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30292AACDCDE0039B426 /* RestaurantItem.swift */; };
 		C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */; };
 		C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */; };
-		C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextField.swift */; };
+		C33D30392AACF3AE0039B426 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextFields.swift */; };
 		C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */; };
 		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
@@ -32,6 +32,9 @@
 		C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */; };
 		C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */; };
 		C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */; };
+		C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */; };
+		C3D9E7B02AB870D8001728B9 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */; };
+		C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */; };
 		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
 		C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = C3EA6F472AB31EF5009FF0BB /* FloatingButton */; };
 		C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */; };
@@ -60,7 +63,7 @@
 		C33D30292AACDCDE0039B426 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
 		C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModel.swift; sourceTree = "<group>"; };
 		C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
-		C33D30382AACF3AE0039B426 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C33D30382AACF3AE0039B426 /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		C33D303A2AACF9960039B426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPopupViewModel.swift; sourceTree = "<group>"; };
 		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -82,6 +85,9 @@
 		C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDraggableView.swift; sourceTree = "<group>"; };
 		C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScontrinoView.swift; sourceTree = "<group>"; };
 		C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInsideScontrino.swift; sourceTree = "<group>"; };
+		C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkView.swift; sourceTree = "<group>"; };
 		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,8 @@
 				C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */,
 				C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */,
 				C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */,
+				C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */,
+				C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,11 +218,12 @@
 			isa = PBXGroup;
 			children = (
 				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
-				C33D30382AACF3AE0039B426 /* CustomTextField.swift */,
+				C33D30382AACF3AE0039B426 /* CustomTextFields.swift */,
 				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
 				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
 				C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */,
 				C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */,
+				C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -359,14 +368,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */,
-				C33D30392AACF3AE0039B426 /* CustomTextField.swift in Sources */,
+				C33D30392AACF3AE0039B426 /* CustomTextFields.swift in Sources */,
 				C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */,
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */,
+				C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */,
 				C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */,
 				C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */,
 				C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */,
 				C33D30282AACD1830039B426 /* PersistenceController.swift in Sources */,
+				C3D9E7B02AB870D8001728B9 /* AddFoodView.swift in Sources */,
 				C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */,
 				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
 				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
@@ -374,6 +385,7 @@
 				C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */,
 				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
+				C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */,
 				C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */,
 				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
 				C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */,

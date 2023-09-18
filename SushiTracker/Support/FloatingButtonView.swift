@@ -10,12 +10,17 @@ import SwiftUI
 
 struct FloatingButtonView: View {
     @State private var open = false
-    @State private var showAddFoodSheet = false // Variabile di stato per mostrare/nascondere il modulo
+    @State private var showAddFoodSheet = false
+    @State private var showAddDrinksSheet = false
+    
+    @EnvironmentObject private var soundManager: SoundManager
     
     var body: some View {
         HStack {
             ZStack {
-                Button(action: { self.open.toggle() }) {
+                Button(action: { self.open.toggle()
+                    self.soundManager.playSound(named: "buttonpressed")
+                }) {
                     Image(systemName: "plus")
                         .rotationEffect(.degrees(open ? 45: 0))
                         .foregroundColor(.white)
@@ -28,30 +33,23 @@ struct FloatingButtonView: View {
                 .shadow(color: Color.pink, radius: 10)
                 .zIndex(10)
                 
-                // Usa SecondaryButton per il pulsante "fork.knife"
                 SecondaryButton(open: $open, icon: "fork.knife", color: "Orange", offsetY: -90) {
-                    // Quando il pulsante "fork.knife" viene premuto, mostra il modulo "Aggiungi cibo"
                     showAddFoodSheet = true
+                    
+                }
+                .sheet(isPresented: $showAddFoodSheet) {
+                    AddFoodView(isPresented: $showAddFoodSheet)
+                        .presentationDetents([.height(200)])
                 }
                 
-                SecondaryButton(open: $open, icon: "wineglass", color: "Blue", offsetX: -60, offsetY: -60, delay: 0.2) {
-                    // Quando il pulsante "fork.knife" viene premuto, mostra il modulo "Aggiungi cibo"
-                    showAddFoodSheet = true
+                SecondaryButton(open: $open, icon: "wineglass", color: "Blue", offsetX: -80, offsetY: -30, delay: 0.2) {
+                    showAddDrinksSheet = true
                 }
-                
-                SecondaryButton(open: $open, icon: "pencil", color: "Green", offsetX: -90, delay: 0.4) {
-                    // Quando il pulsante "fork.knife" viene premuto, mostra il modulo "Aggiungi cibo"
-                    showAddFoodSheet = true
+                .sheet(isPresented: $showAddDrinksSheet) {
+                    AddDrinksView(isPresented: $showAddDrinksSheet)
+                        .presentationDetents([.height(200)])
                 }
-                
             }
-        }
-        // Utilizza il modificatore .sheet per mostrare il modulo "Aggiungi cibo" quando showAddFoodSheet è true
-        .sheet(isPresented: $showAddFoodSheet) {
-            // Questo è il modulo "Aggiungi cibo"
-            AddFoodView(isPresented: $showAddFoodSheet)
-                .presentationDetents([.height(200)])
-            
         }
     }
 }
@@ -85,69 +83,6 @@ struct SecondaryButton: View {
         .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
         .scaleEffect(open ? 1: 0)
         .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(Double(delay)))
-    }
-}
-
-struct AddFoodView: View {
-    @Binding var isPresented: Bool
-    @State private var foodName = ""
-    @State private var foodNumber = ""
-    @State private var foodPortions = ""
-    @State private var keyboardHeight: CGFloat = 0
-    @State private var value: CGFloat = 0
-    
-    
-    var body: some View {
-        ZStack {
-            ZStack {
-                Color.yellow
-                VStack {
-                    Text("Aggiungi cibo")
-                        .bold()
-                        .font(.title)
-                        .padding(.top, -80)
-                }
-                HStack {
-                    TextField("Nome", text: $foodName)
-                        .padding(.vertical, 8)
-                        .padding(.leading, 10)
-                        .background(Color(.white))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                    
-                    TextField("Numero", text: $foodNumber)
-                        .padding(.vertical, 8)
-                        .padding(.leading, 10)
-                        .background(Color(.white))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                    
-                    TextField("Porzioni", text: $foodPortions)
-                        .padding(.vertical, 8)
-                        .padding(.leading, 10)
-                        .background(Color(.white))
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                }
-                .ignoresSafeArea()
-                .presentationDragIndicator(.visible)
-            }
-            .onAppear {
-                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) {
-                    (noti) in
-                    
-                    let value = noti.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-                    let height = value.height
-                    
-                    self.value = height
-                }
-                
-                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (noti) in
-                    
-                    self.value = 0
-                }
-            }
-        }
     }
 }
 

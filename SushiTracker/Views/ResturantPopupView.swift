@@ -14,7 +14,7 @@ struct RestaurantPopupView: View {
     enum Field {
         case name, address, none
     }
-    
+    @EnvironmentObject var keyboardHandling: KeyboardHandling
     @ObservedObject var model: RestaurantModel
     @Binding var isPresented: Bool
     @Environment(\.managedObjectContext) private var viewContext
@@ -30,6 +30,7 @@ struct RestaurantPopupView: View {
     @State private var mapUpdateTimer: Timer?
     @FocusState private var focusField: Field?
     @FocusState private var isFocus: Bool
+    
     
     var body: some View {
         ZStack {
@@ -61,7 +62,6 @@ struct RestaurantPopupView: View {
                             .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .focused($isFocus)
                             .shadow(radius: 10)
-                        
                     }
                     .padding(20)
                 }
