@@ -22,7 +22,7 @@ struct CustomDraggableView<Content: View>: View {
 
     var body: some View {
         content
-            .offset(x: dragOffset.width, y: dragOffset.height)
+            .offset(x: dragOffset.width)
             .gesture(
                 DragGesture()
                     .onChanged { value in
@@ -33,7 +33,7 @@ struct CustomDraggableView<Content: View>: View {
                     }
                     .onEnded { gesture in
                         if isDragging {
-                            if gesture.translation.width > 100 {
+                            if gesture.translation.width > 50 {
                                 // Chiudi la vista
                                 presentationMode.wrappedValue.dismiss()
                             } else {

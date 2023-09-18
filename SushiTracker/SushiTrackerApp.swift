@@ -12,9 +12,13 @@ import Foundation
 
 @main
 struct SushiTrackerApp: App {
+    
     let persistenceController = PersistenceController.shared
     @StateObject private var keyboardHandling = KeyboardHandling()
-    @StateObject var soundManager = SoundManager.shared // Utilizzo dell'istanza condivisa
+    @StateObject var soundManager = SoundManager.shared
+    
+    // Crea un'istanza di FoodData con il contesto di Core Data
+    let foodData = FoodData(managedObjectContext: PersistenceController.shared.container.viewContext)
 
     var body: some Scene {
         WindowGroup {
@@ -22,6 +26,7 @@ struct SushiTrackerApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(keyboardHandling)
                 .environmentObject(soundManager)
+                .environmentObject(foodData) // Passa foodData con il contesto di Core Data
         }
     }
 }

@@ -8,45 +8,53 @@
 import SwiftUI
 
 struct ListInsideScontrino: View {
+    
+    @State private var isAddFoodViewPresented = false
+    @StateObject private var keyboardHandling = KeyboardHandling()
+    @EnvironmentObject var foodData: FoodData
+    
+    var foodItems: [MyFoodItem] {
+        foodData.foodItems
+    }
+    
+    
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("Sashimi")
-                        Divider()
-                        Text("A60")
-                            .bold()
-                        Spacer()
-                        Text("Porzioni:")
-                        Text("7")
-                    }
-                    
-                    HStack {
-                        Text("Gunkan con roll di sashimi e salsa rosa e patatine fritte con ketchup")
-                            .truncationMode(.tail)
-                            .minimumScaleFactor(0.3)
-                            .lineLimit(3)
-                        Divider()
-                        Text("A720")
-                            .bold()
-                        Spacer()
-                        Text("Porzioni:")
-                        Text("3")
-                       
-                    }
-                    
+        NavigationView {
+            List {
+                ForEach(foodData.foodItems) { foodItem in
+                    FoodItemRow(foodItem: foodItem)
+                        .listRowSeparator(.hidden)
                 }
-                .padding(.horizontal)
-                Spacer()
+                .onDelete(perform: deleteFoodItem)
             }
+            .listStyle(PlainListStyle()) // Rimuovi lo stile predefinito
+            .background(Color.clear)
         }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.white)
-            }
+    }
+    
+    private func deleteFoodItem(at offsets: IndexSet) {
+        foodData.foodItems.remove(atOffsets: offsets)
+    }
+    
 }
-
+struct FoodItemRow: View {
+    var foodItem: MyFoodItem
+    
+    var body: some View {
+        HStack {
+            Text(foodItem.name!)
+                .truncationMode(.tail)
+                .minimumScaleFactor(0.3)
+                .lineLimit(2)
+            Spacer()
+            Text(foodItem.orderNumber!)
+                .bold()
+            Spacer()
+            Text("Porzioni:")
+            Text("\(foodItem.portionCount)")
+        }
+    }
+}
 
 struct ListInsideScontrino_Previews: PreviewProvider {
     static var previews: some View {

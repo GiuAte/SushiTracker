@@ -7,44 +7,59 @@
 
 import Foundation
 import SwiftUI
+import CoreData
+
 
 struct AddFoodView: View {
     @Binding var isPresented: Bool
     @State private var foodName = ""
     @State private var foodNumber = ""
-    @State private var foodPortions = ""
+    @State private var portionCount = ""
     @EnvironmentObject var keyboardHandling: KeyboardHandling
-
+    @EnvironmentObject var foodData: FoodData
+    
     var body: some View {
         ZStack {
             Color.yellow
                 .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
                 Text("Aggiungi cibo")
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.top, 20)
-
+                
                 HStack {
                     CustomTextField(placeholder: "Nome", text: $foodName, returnKeyType: .next, tag: 1)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.horizontal, .bottom])
-                    .keyboardType(.default)
-
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding([.horizontal, .bottom])
+                        .keyboardType(.default)
+                    
                     CustomTextField(placeholder: "Numero", text: $foodNumber, returnKeyType: .next, tag: 2)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.horizontal, .bottom])
-                    .keyboardType(.numberPad)
-
-                    CustomTextField(placeholder: "Porzioni", text: $foodPortions, returnKeyType: .done, tag: 3)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.horizontal, .bottom])
-                    .keyboardType(.decimalPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding([.horizontal, .bottom])
+                        .keyboardType(.numberPad)
+                    
+                    CustomTextField(placeholder: "Porzioni", text: $portionCount, returnKeyType: .done, tag: 3)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding([.horizontal, .bottom])
+                        .keyboardType(.decimalPad)
                 }
-
+                
                 Button(action: {
-                    // Azione da eseguire quando viene premuto il bottone
+                    // Aggiungi un nuovo FoodItem all'array tramite l'oggetto foodData
+                    if let portionCount = Int(portionCount) {
+                        let newFoodItem = MyFoodItem(context: foodData.managedObjectContext)
+                        newFoodItem.name = foodName
+                        newFoodItem.orderNumber = foodNumber
+                        newFoodItem.portionCount = Int16(portionCount) // Gestione degli errori
+
+                        // Aggiungi il nuovo oggetto a foodData
+                        foodData.addFoodItem(newFoodItem)
+
+                        // Chiudi la vista
+                        isPresented = false
+                    }
                 }) {
                     Text("Aggiungi")
                         .fontWeight(.bold)
@@ -55,6 +70,7 @@ struct AddFoodView: View {
                         .shadow(radius: 5)
                 }
                 .padding()
+                
             }
         }
         .presentationDragIndicator(.visible)

@@ -15,6 +15,9 @@
 		C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */; };
 		C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */; };
 		C33D30392AACF3AE0039B426 /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D30382AACF3AE0039B426 /* CustomTextFields.swift */; };
+		C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */; };
+		C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */; };
+		C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F030A2AB8B21C00CE0E7B /* FoodData.swift */; };
 		C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */; };
 		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
@@ -65,6 +68,9 @@
 		C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
 		C33D30382AACF3AE0039B426 /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		C33D303A2AACF9960039B426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemManager.swift; sourceTree = "<group>"; };
+		C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C35F030A2AB8B21C00CE0E7B /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPopupViewModel.swift; sourceTree = "<group>"; };
 		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			children = (
 				C33D30272AACD1830039B426 /* PersistenceController.swift */,
 				C33D30292AACDCDE0039B426 /* RestaurantItem.swift */,
+				C35F030A2AB8B21C00CE0E7B /* FoodData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 		C3947A0D2AA9BB2C00561D26 /* SushiTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */,
+				C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */,
 				C33D303A2AACF9960039B426 /* Info.plist */,
 				C33D302D2AACE2140039B426 /* ViewModel */,
 				C33D302C2AACE1F10039B426 /* Model */,
@@ -372,6 +381,9 @@
 				C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */,
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */,
+				C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */,
+				C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */,
+				C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */,
 				C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */,
 				C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */,
 				C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */,
@@ -567,6 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -600,6 +613,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

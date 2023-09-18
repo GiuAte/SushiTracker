@@ -16,7 +16,6 @@ class PersistenceController {
     
     var preview: NSPersistentContainer {
         let container = NSPersistentContainer(name: "SushiDataModel")
-        
         container.persistentStoreDescriptions[0].url = URL(fileURLWithPath: "/dev/null")
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
