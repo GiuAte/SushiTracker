@@ -27,19 +27,18 @@ struct ScontrinoView: View {
                             path.addLine(to: CGPoint(x: UIScreen.main.bounds.width, y: UIScreen.main.bounds.height))
                             path.addLine(to: CGPoint(x: 0, y: UIScreen.main.bounds.height))
                         }
-                            .scaleEffect(CGSize(width: 1.0, height: -1.0))
+                        .scaleEffect(CGSize(width: 1.0, height: -1.0))
                     )
                     .shadow(radius: 5)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
         .ignoresSafeArea()
-        
     }
-    
-    struct ScontrinoView_Preview: PreviewProvider {
-        static var previews: some View {
-            ScontrinoView()
-        }
+}
+
+struct ScontrinoView_Preview: PreviewProvider {
+    static var previews: some View {
+        ScontrinoView()
     }
 }

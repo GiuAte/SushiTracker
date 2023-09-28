@@ -56,8 +56,6 @@ struct FoodItemRow: View {
     }
 }
 
-struct ListInsideScontrino_Previews: PreviewProvider {
-    static var previews: some View {
-        ListInsideScontrino()
-    }
+#Preview {
+    ListInsideScontrino()
 }

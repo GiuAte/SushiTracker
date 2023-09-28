@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
 struct FloatingButtonView: View {
     @State private var open = false
@@ -19,7 +20,7 @@ struct FloatingButtonView: View {
         HStack {
             ZStack {
                 Button(action: { self.open.toggle()
-                    self.soundManager.playSound(named: "buttonpressed")
+                    SoundManager.shared.playSound(named: "buttonpressed")
                 }) {
                     Image(systemName: "plus")
                         .rotationEffect(.degrees(open ? 45: 0))

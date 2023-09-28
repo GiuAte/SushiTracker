@@ -5,11 +5,9 @@
 //  Created by Giulio Aterno on 07/09/23.
 //
 
-
 import SwiftUI
 import MapKit
 import CoreLocation
-
 
 struct RestaurantDetailView: View {
     @Environment(\.presentationMode) private var presentationMode
@@ -38,12 +36,15 @@ struct RestaurantDetailView: View {
                     Text(viewModel.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .fontDesign(.serif)
+                        .foregroundColor(Color.pink)
                         .frame(maxWidth: .infinity)
                         .minimumScaleFactor(0.8)
                     
                     Text(viewModel.address)
                         .font(.body)
                         .fontWeight(.light)
+                        .fontDesign(.rounded)
                         .frame(maxWidth: .infinity)
                         .minimumScaleFactor(0.8)
                     
@@ -61,7 +62,7 @@ struct RestaurantDetailView: View {
                 VStack {
                     Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: viewModel.restaurantCoordinate ?? CLLocationCoordinate2D(), title: viewModel.name)]) { annotation in
                         MapMarker(coordinate: annotation.coordinate, tint: .red)
-                    
+                        
                     }
                     .onAppear {
                         geocodeAddress()
@@ -78,6 +79,7 @@ struct RestaurantDetailView: View {
                         .frame(width: 350, height: 400)
                 }
                 HStack {
+                    QRCodeButton()
                     Spacer()
                     FloatingButtonView()
                 }
@@ -139,20 +141,19 @@ struct RestaurantDetailView: View {
         }
     }
 }
-
-
-struct RestaurantDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let context = PersistenceController.shared.preview.viewContext
-        let restaurant = RestaurantItem(context: context)
-        restaurant.name = "Nome del Ristorante"
-        restaurant.address = "Indirizzo del Ristorante"
-        restaurant.rating = 4
-        
-        let viewModel = RestaurantDetailViewModel(restaurant: restaurant)
-        
-        return NavigationView {
-            RestaurantDetailView(viewModel: viewModel)
+    
+    struct RestaurantDetailView_Previews: PreviewProvider {
+        static var previews: some View {
+            let context = PersistenceController.shared.preview.viewContext
+            let restaurant = RestaurantItem(context: context)
+            restaurant.name = "Nome del Ristorante"
+            restaurant.address = "Indirizzo del Ristorante"
+            restaurant.rating = 4
+            
+            let viewModel = RestaurantDetailViewModel(restaurant: restaurant)
+            
+            return NavigationView {
+                RestaurantDetailView(viewModel: viewModel)
+            }
         }
     }
-}
