@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */; };
 		C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
 		C33D301D2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
 		C33D301E2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 		C3F96FA82AC593FF0072DA42 /* QRCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */; };
 		C3F96FAA2AC59AAD0072DA42 /* buttonpressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */; };
 		C3F96FAC2AC5AB9C0072DA42 /* Extensions+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F96FAB2AC5AB9C0072DA42 /* Extensions+Views.swift */; };
+		C3F96FAE2AC5C9000072DA42 /* GradiendBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButton.swift; sourceTree = "<group>"; };
 		C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SushiDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C33D30272AACD1830039B426 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		C33D30292AACDCDE0039B426 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeButton.swift; sourceTree = "<group>"; };
 		C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonpressed.mp3; sourceTree = "<group>"; };
 		C3F96FAB2AC5AB9C0072DA42 /* Extensions+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Views.swift"; sourceTree = "<group>"; };
+		C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradiendBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,8 @@
 				C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */,
 				C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */,
 				C3F96FAB2AC5AB9C0072DA42 /* Extensions+Views.swift */,
+				C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */,
+				C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */,
 				C33D30392AACF3AE0039B426 /* CustomTextFields.swift in Sources */,
 				C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */,
+				C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */,
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */,
 				C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */,
@@ -437,6 +444,7 @@
 				C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */,
 				C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */,
 				C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */,
+				C3F96FAE2AC5C9000072DA42 /* GradiendBackgroundView.swift in Sources */,
 				C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */,
 				C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */,
 			);

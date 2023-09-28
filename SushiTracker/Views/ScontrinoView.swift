@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ScontrinoView: View {
     var body: some View {
-        VStack {
             ZStack {
                 ListInsideScontrino()
                     .padding()
@@ -26,13 +25,14 @@ struct ScontrinoView: View {
                             
                             path.addLine(to: CGPoint(x: UIScreen.main.bounds.width, y: UIScreen.main.bounds.height))
                             path.addLine(to: CGPoint(x: 0, y: UIScreen.main.bounds.height))
+                            
                         }
                         .scaleEffect(CGSize(width: 1.0, height: -1.0))
                     )
                     .shadow(radius: 5)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    //.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .cornerRadius(5)
             }
-        }
         .ignoresSafeArea()
     }
 }

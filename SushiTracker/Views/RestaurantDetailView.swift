@@ -27,12 +27,11 @@ struct RestaurantDetailView: View {
     }
     
     var body: some View {
-        
-        VStack {
-            Spacer(minLength: 30)
-            CustomDraggableView(dragOffset: $dragOffset, isDragging: $isDragging) {
+        CustomDraggableView(dragOffset: $dragOffset, isDragging: $isDragging) {
+            VStack {
+                Spacer(minLength: 30)
                 VStack {
-                    
+                    Spacer()
                     Text(viewModel.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -45,6 +44,7 @@ struct RestaurantDetailView: View {
                         .font(.body)
                         .fontWeight(.light)
                         .fontDesign(.rounded)
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .minimumScaleFactor(0.8)
                     
@@ -52,10 +52,10 @@ struct RestaurantDetailView: View {
                         Text("\(viewModel.rating)/5")
                             .font(.subheadline)
                             .bold()
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                         
                         Image(systemName: "star.fill")
-                            .foregroundColor(.black)
+                            .foregroundColor(.yellow)
                             .font(.system(size: 15))
                     }
                 }
@@ -70,6 +70,7 @@ struct RestaurantDetailView: View {
                     .onTapGesture {
                         openMapsApp(coordinate: viewModel.restaurantCoordinate ?? CLLocationCoordinate2D(), name: viewModel.name)
                     }
+                    .cornerRadius(10)
                     .frame(width: 330,height: 150)
                     .padding(20)
                     .background(Color.clear)
@@ -85,31 +86,10 @@ struct RestaurantDetailView: View {
                 }
                 .padding()
             }
+            .background(GradientBackgroundView())
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationBarBackButtonHidden(true)
         }
-        .background(Color.yellow)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationBarBackButtonHidden(true)
-        .simultaneousGesture(
-            DragGesture()
-                .onChanged { value in
-                    if value.translation.width > 0 {
-                        dragOffset = value.translation
-                        isDragging = true
-                    }
-                }
-                .onEnded { gesture in
-                    if isDragging {
-                        if gesture.translation.width > 100 {
-                            presentationMode.wrappedValue.dismiss()
-                        } else {
-                            withAnimation {
-                                dragOffset = .zero
-                                isDragging = false
-                            }
-                        }
-                    }
-                }
-        )
     }
     
     private func geocodeAddress() {
@@ -141,19 +121,19 @@ struct RestaurantDetailView: View {
         }
     }
 }
-    
-    struct RestaurantDetailView_Previews: PreviewProvider {
-        static var previews: some View {
-            let context = PersistenceController.shared.preview.viewContext
-            let restaurant = RestaurantItem(context: context)
-            restaurant.name = "Nome del Ristorante"
-            restaurant.address = "Indirizzo del Ristorante"
-            restaurant.rating = 4
-            
-            let viewModel = RestaurantDetailViewModel(restaurant: restaurant)
-            
-            return NavigationView {
-                RestaurantDetailView(viewModel: viewModel)
-            }
+
+struct RestaurantDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        let context = PersistenceController.shared.preview.viewContext
+        let restaurant = RestaurantItem(context: context)
+        restaurant.name = "Nome del Ristorante"
+        restaurant.address = "Indirizzo del Ristorante"
+        restaurant.rating = 4
+        
+        let viewModel = RestaurantDetailViewModel(restaurant: restaurant)
+        
+        return NavigationView {
+            RestaurantDetailView(viewModel: viewModel)
         }
     }
+}

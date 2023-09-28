@@ -29,8 +29,7 @@ struct QRCodeButton: View {
                 .mask(Circle())
                 .shadow(color: Color.pink, radius: 10)
                 .zIndex(10)
-                
-                .sheet(isPresented: $isScannerViewPresented) {
+                .fullScreenCover(isPresented: $isScannerViewPresented) {
                     ScannerView()
                 }
             }

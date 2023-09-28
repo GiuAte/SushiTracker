@@ -27,6 +27,8 @@ struct RestaurantRowView: View {
                     .font(.subheadline)
                     .italic()
                     .foregroundColor(.gray)
+                    .minimumScaleFactor(0.3)
+                    .lineLimit(1)
             }
             
             Spacer()
@@ -38,14 +40,7 @@ struct RestaurantRowView: View {
             
             Image(systemName: "star.fill")
                 .foregroundColor(.yellow)
-                .font(.system(size: 20)) 
+                .font(.system(size: 20))
         }
     }
 }
-/*
-struct RestaurantRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        RestaurantRowView(restaurant: RestaurantItem(name: "Yuki", address: "Via Galileo Galilei, Palermo", rating: 5))
-    }
-}
-*/

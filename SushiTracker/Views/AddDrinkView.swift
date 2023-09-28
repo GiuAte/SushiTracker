@@ -18,7 +18,7 @@ struct AddDrinksView: View {
     
     var body: some View {
         ZStack {
-            Color.yellow
+            (Color("backgroundColor"))
                 .edgesIgnoringSafeArea(.all)
             
             VStack {

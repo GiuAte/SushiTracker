@@ -24,17 +24,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 HStack {
-                    Text("Home")
+                    Text("I Tuoi Ristoranti")
                         .font(.title3)
                         .bold()
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                 }
                 
                 if restaurants.isEmpty {
                     Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
-                        .foregroundColor(Color.black.opacity(0.5))
-                        .font(.headline)
+                        .foregroundColor(Color.white)
+                        .font(.callout)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding([.leading, .trailing], 20)
@@ -50,7 +51,6 @@ struct ContentView: View {
                                 }
                                 .onDelete(perform: deleteRestaurant)
                             }
-                            .background(Color.yellow)
                         } else if filteredRestaurants.isEmpty {
                             Text("Nessun ristorante trovato")
                                 .foregroundColor(Color.black.opacity(0.5))
@@ -59,8 +59,7 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .padding([.leading, .trailing], 20)
                         } else {
-                            Color.yellow
-                            
+                            GradientBackgroundView()
                         }
                     }
                 }
@@ -71,7 +70,7 @@ struct ContentView: View {
                     }
                 }) {
                     Image(systemName: "plus")
-                        .font(.system(size: 50))
+                        .font(.system(size: 25))
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.pink)
@@ -85,7 +84,7 @@ struct ContentView: View {
                 }
             }
             .scrollContentBackground(.hidden)
-            .background(Color.yellow)
+            .background(GradientBackgroundView())
         }
     }
     

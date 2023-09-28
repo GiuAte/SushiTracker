@@ -25,23 +25,26 @@ struct ScannerView: View {
     @State private var scannedCode: String = ""
     /// Orientamento del Device
     @State private var orientation: UIDeviceOrientation = UIDevice.current.orientation
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack(spacing: 8) {
             Button {
-                
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3)
-                    .foregroundColor(Color("Blue"))
+                    .foregroundColor(Color.black)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-
-            Text("Place the QR code inside the area")
+            
+            Text("Posiziona il QR Code al centro")
                 .font(.title3)
                 .foregroundColor(.black.opacity(0.8))
                 .padding(.top, 20)
             
-            Text("Scanning will start automatically")
+            Text("La scansione inizierà automaticamente")
                 .font(.callout)
                 .foregroundColor(.gray)
             
@@ -67,7 +70,7 @@ struct ScannerView: View {
                         
                         RoundedRectangle(cornerRadius: 2, style: .circular)
                             .trim(from: 0.61, to: 0.64)
-                            .stroke(Color("Blue"), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                            .stroke(Color("Pink"), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .rotationEffect(.init(degrees: rotation))
                     }
                 }
@@ -76,7 +79,7 @@ struct ScannerView: View {
                 /// Animazione Scanner
                 .overlay(alignment: .top, content: {
                     Rectangle()
-                        .fill(Color("Blue"))
+                        .fill(Color("Pink"))
                         .frame(height: 2.5)
                         .shadow(color: .black.opacity(0.8), radius: 8, x: 0, y: isScanning ? 15 : -15)
                         .offset(y: isScanning ? sqareWidth : 0)
@@ -97,6 +100,10 @@ struct ScannerView: View {
                     .font(.largeTitle)
                     .foregroundColor(.gray)
             }
+            
+            Text("Tocca l'icona per eseguire una nuova scansione")
+                .font(.callout)
+                .foregroundColor(.gray)
             
             Spacer(minLength: 45)
         }
@@ -130,8 +137,10 @@ struct ScannerView: View {
                 deActivateScannerAnimation()
                 /// Pulisce i Dati del Delegate
                 qrDelegate.scannedCode = nil
-                /// Presentazione dell'errore
-                presentError(scannedCode)
+                /// Apri Safari con l'URL scannerizzato
+                if let url = URL(string: scannedCode), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             }
         }
         .onChange(of: session.isRunning) { newValue in
@@ -212,7 +221,7 @@ struct ScannerView: View {
                 return
             }
             
-
+            
             session.beginConfiguration()
             session.addInput(input)
             session.addOutput(qrOutput)
@@ -240,6 +249,6 @@ struct ScannerView: View {
 
 struct ScannerView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ScannerView()
     }
 }
