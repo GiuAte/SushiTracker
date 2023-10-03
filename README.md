@@ -34,7 +34,7 @@ L'app è stata sviluppata seguendo il pattern architetturale Model-View-ViewMode
 
 ## Autori
 
-- Giulio Aterno ([GitHub](www.github.com/giuate))
+- Giulio Aterno ([GitHub](https://github.com/GiuAte))
 
 ## Licenza
 
@@ -78,7 +78,7 @@ The app is developed following the Model-View-ViewModel (MVVM) architectural pat
 
 ## Authors
 
-- Giulio Aterno ([GitHub](www.github.com/giuate))
+- Giulio Aterno ([GitHub](https://github.com/GiuAte))
 
 ## License
 
