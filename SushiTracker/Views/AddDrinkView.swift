@@ -28,6 +28,7 @@ struct AddDrinksView: View {
                     .padding(.top, 20)
                 
                 HStack {
+                    // MARK: PIETRO - Usa il CustomTextFieldModifier
                     CustomTextField(placeholder: "Nome", text: $drinkName, returnKeyType: .next, tag: 1)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding([.horizontal, .bottom])

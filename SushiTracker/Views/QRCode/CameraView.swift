@@ -8,14 +8,14 @@
 import SwiftUI
 import AVKit
 
-/// Camera View Using AVCaptureVideoPreviewLayer
+
 struct CameraView: UIViewRepresentable {
     var frameSize: CGSize
-    /// Camera Session
+    
     @Binding var session: AVCaptureSession
     @Binding var orientation: UIDeviceOrientation
     func makeUIView(context: Context) -> UIView {
-        /// Defining Camera Frame Size
+        
         let view = UIViewType(frame: CGRect(origin: .zero, size: frameSize))
         view.backgroundColor = .clear
         
@@ -29,7 +29,7 @@ struct CameraView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
-        /// Video Orientation to adapt for iPad Orientation
+        
         if let layer = uiView.layer.sublayers?.first(where: { layer in
             layer is AVCaptureVideoPreviewLayer
         }) as? AVCaptureVideoPreviewLayer {

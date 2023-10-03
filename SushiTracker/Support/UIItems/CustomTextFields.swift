@@ -12,7 +12,7 @@ struct CustomTextField: UIViewRepresentable {
     private let placeholder: String
     @Binding private var text: String
     private let returnKeyType: UIReturnKeyType
-    private let tag: Int // Aggiungi una variabile tag per identificare il campo di testo
+    private let tag: Int
 
     init(placeholder: String, text: Binding<String>, returnKeyType: UIReturnKeyType, tag: Int) {
         self.placeholder = placeholder
@@ -27,7 +27,7 @@ struct CustomTextField: UIViewRepresentable {
         textField.text = text
         textField.returnKeyType = returnKeyType
         textField.delegate = context.coordinator
-        textField.tag = tag // Imposta il tag per identificare il campo di testo
+        textField.tag = tag
         textField.borderStyle = .roundedRect
         textField.backgroundColor = UIColor.white
         textField.attributedPlaceholder = NSAttributedString(

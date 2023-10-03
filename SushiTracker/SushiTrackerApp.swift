@@ -22,11 +22,14 @@ struct SushiTrackerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(keyboardHandling)
-                .environmentObject(soundManager)
-                .environmentObject(foodData) // Passa foodData con il contesto di Core Data
+            // MARK: PIETRO - Includi la NavigationView qui. Così non devi poi riportarla ovunque
+            NavigationStack {
+                ContentView()
+            }
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            .environmentObject(keyboardHandling)
+            .environmentObject(soundManager)
+            .environmentObject(foodData)
         }
     }
 }

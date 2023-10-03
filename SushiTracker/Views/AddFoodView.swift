@@ -30,9 +30,21 @@ struct AddFoodView: View {
                     .padding(.top, 20)
                 
                 HStack {
+                    // MARK: PIETRO - Crea un modifier piuttosto che ripetere sempre. Magari gli passi anche un valore dinamico per la keyboardType -->
+                    /*
+                     struct CustomTextFieldModifier: ViewModifier {
+                         func body(content: Content) -> some View {
+                             content
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .padding([.horizontal, .bottom])
+                         }
+                     }
+                    */
+                    
                     CustomTextField(placeholder: "Nome", text: $foodName, returnKeyType: .next, tag: 1)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding([.horizontal, .bottom])
+                        // MARK: PIETRO - usalo così .modifier(CustomTextFieldModifier())
+                        // .textFieldStyle(RoundedBorderTextFieldStyle())
+                        // .padding([.horizontal, .bottom])
                         .keyboardType(.default)
                     
                     CustomTextField(placeholder: "Numero", text: $foodNumber, returnKeyType: .next, tag: 2)

@@ -10,7 +10,7 @@ import CoreData
 class FoodData: ObservableObject {
     @Published var foodItems: [MyFoodItem] = []
     
-    var managedObjectContext: NSManagedObjectContext // Aggiungi il contesto di Core Data
+    var managedObjectContext: NSManagedObjectContext
 
     init(managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext

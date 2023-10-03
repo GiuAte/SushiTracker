@@ -10,7 +10,6 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \RestaurantItem.name, ascending: true)],
         animation: .default)
@@ -22,15 +21,8 @@ struct ContentView: View {
     @State private var open = false
     
     var body: some View {
-        NavigationView {
             VStack {
                 Spacer()
-                HStack {
-                    Text("I Tuoi Ristoranti")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(Color.white)
-                }
                 
                 if restaurants.isEmpty {
                     Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
@@ -40,7 +32,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding([.leading, .trailing], 20)
                 } else {
-                    SearchBar(text: $searchText)
+                    // MARK: PIETRO - Usa .searchable(text: $searchText)
+                    // SearchBar(text: $searchText)
                     ZStack {
                         if !filteredRestaurants.isEmpty {
                             List {
@@ -85,7 +78,9 @@ struct ContentView: View {
             }
             .scrollContentBackground(.hidden)
             .background(GradientBackgroundView())
-        }
+            .navigationTitle("I Tuoi Ristoranti")
+            .navigationBarTitleDisplayMode(.large)
+            .searchable(text: $searchText, prompt: "Cerca")
     }
     
     private func deleteRestaurant(at offsets: IndexSet) {

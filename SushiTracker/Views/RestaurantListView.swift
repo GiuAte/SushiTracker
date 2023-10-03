@@ -16,16 +16,14 @@ struct RestaurantListView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.filteredRestaurants) { restaurant in
-                    NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
-                        RestaurantRowView(restaurant: restaurant)
-                    }
+        List {
+            ForEach(viewModel.filteredRestaurants) { restaurant in
+                NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
+                    RestaurantRowView(restaurant: restaurant)
                 }
-                .onDelete(perform: viewModel.deleteRestaurant)
-                .padding(.bottom, 5)
             }
+            .onDelete(perform: viewModel.deleteRestaurant)
+            .padding(.bottom, 5)
         }
         .onAppear {
             viewModel.loadRestaurants()

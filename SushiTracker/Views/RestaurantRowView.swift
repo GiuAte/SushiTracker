@@ -5,42 +5,43 @@
 //  Created by Giulio Aterno on 07/09/23.
 //
 
-import SwiftUI
+    import SwiftUI
+    import CoreData
 
-struct RestaurantRowView: View {
-    
-    var restaurant: RestaurantItem
-    
-    var body: some View {
+    struct RestaurantRowView: View {
         
-        HStack {
-            Image(systemName: "mappin.circle.fill")
-                .foregroundColor(.red)
-                .font(.system(size: 32))
+        var restaurant: RestaurantItem
+        
+        var body: some View {
             
-            
-            VStack(alignment: .leading) {
-                Text(restaurant.name!)
-                    .font(.headline)
+            HStack {
+                Image(systemName: "mappin.circle.fill")
+                    .foregroundColor(.red)
+                    .font(.system(size: 32))
                 
-                Text(restaurant.address!)
+                VStack(alignment: .leading) {
+                    Text(restaurant.name ?? "")
+                        .font(.headline)
+                        
+                    
+                    Text(restaurant.address ?? "")
+                        .font(.subheadline)
+                        .italic()
+                        .foregroundColor(.gray)
+                        .minimumScaleFactor(0.3)
+                        .lineLimit(1)
+                }
+                
+                Spacer()
+                
+                Text("\(restaurant.rating)/5")
                     .font(.subheadline)
-                    .italic()
-                    .foregroundColor(.gray)
-                    .minimumScaleFactor(0.3)
-                    .lineLimit(1)
+                    .bold()
+                    
+                
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 20))
             }
-            
-            Spacer()
-            
-            Text("\(restaurant.rating)/5")
-                .font(.subheadline)
-                .bold()
-                .foregroundColor(.black)
-            
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .font(.system(size: 20))
         }
     }
-}

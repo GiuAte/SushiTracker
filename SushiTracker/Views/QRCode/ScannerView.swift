@@ -29,6 +29,8 @@ struct ScannerView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
+        ZStack {
+            Color.white
         VStack(spacing: 8) {
             Button {
                 presentationMode.wrappedValue.dismiss()
@@ -149,6 +151,8 @@ struct ScannerView: View {
             }
         }
     }
+        .ignoresSafeArea()
+}
     
     func reactivateCamera() {
         DispatchQueue.global(qos: .background).async {

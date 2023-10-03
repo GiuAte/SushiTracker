@@ -12,14 +12,14 @@ struct RoundedRectangleButton: View {
     
     var body: some View {
         Button(action: action) {
-            Text("title")
+            Text("test")
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(("Pink"))) // Puoi personalizzare il colore qui
+                        .fill(Color(("Pink")))
                 )
         }
     }
@@ -28,7 +28,7 @@ struct RoundedRectangleButton: View {
 struct RoundedRectangleButton_Previews: PreviewProvider {
     static var previews: some View {
         RoundedRectangleButton() {
-            // Azione da eseguire quando il pulsante viene premuto
+        
         }
     }
 }

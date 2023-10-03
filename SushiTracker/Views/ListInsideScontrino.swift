@@ -18,34 +18,32 @@ struct ListInsideScontrino: View {
     }
 
     var body: some View {
-        NavigationView {
-            if foodItems.isEmpty {
-                VStack {
-                    Text("Il riepilogo del tuo ordine apparirà qui una volta aggiunte le varie pietanze.")
+        if foodItems.isEmpty {
+            VStack {
+                Text("Il riepilogo del tuo ordine apparirà qui una volta aggiunte le varie pietanze.")
+                    .font(.callout)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Button(action: {
+                    isAddFoodViewPresented.toggle()
+                }) {
+                    Text("Clicca il bottone in basso a destra ed inizia ad aggiungere il cibo!")
                         .font(.callout)
                         .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    Button(action: {
-                        isAddFoodViewPresented.toggle()
-                    }) {
-                        Text("Clicca il bottone in basso a destra ed inizia ad aggiungere il cibo!")
-                            .font(.callout)
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
                 }
-            } else {
-                List {
-                    ForEach(foodData.foodItems) { foodItem in
-                        FoodItemRow(foodItem: foodItem)
-                            .listRowSeparator(.hidden)
-                    }
-                    .onDelete(perform: deleteFoodItem)
-                }
-                .listStyle(PlainListStyle())
-                .background(Color.clear)
+                .padding()
             }
+        } else {
+            List {
+                ForEach(foodData.foodItems) { foodItem in
+                    FoodItemRow(foodItem: foodItem)
+                        .listRowSeparator(.hidden)
+                }
+                .onDelete(perform: deleteFoodItem)
+            }
+            .listStyle(PlainListStyle())
+            .background(Color.clear)
         }
         Color.gray.opacity(0.050)
     }

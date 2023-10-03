@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */; };
+		C326CB8F2ACC7A3900B8CBC8 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */; };
 		C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
 		C33D301D2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
 		C33D301E2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
@@ -23,7 +24,6 @@
 		C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */; };
 		C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */; };
 		C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F030A2AB8B21C00CE0E7B /* FoodData.swift */; };
-		C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */; };
 		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
 		C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */; };
@@ -37,7 +37,6 @@
 		C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */; };
 		C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */; };
 		C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */; };
-		C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */; };
 		C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */; };
 		C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */; };
 		C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */; };
@@ -71,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButton.swift; sourceTree = "<group>"; };
+		C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SushiDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C33D30272AACD1830039B426 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		C33D30292AACDCDE0039B426 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 		C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemManager.swift; sourceTree = "<group>"; };
 		C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C35F030A2AB8B21C00CE0E7B /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
-		C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPopupViewModel.swift; sourceTree = "<group>"; };
 		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandling.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
 		C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRowView.swift; sourceTree = "<group>"; };
-		C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDraggableView.swift; sourceTree = "<group>"; };
 		C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScontrinoView.swift; sourceTree = "<group>"; };
 		C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInsideScontrino.swift; sourceTree = "<group>"; };
 		C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -162,11 +160,13 @@
 		C33D302C2AACE1F10039B426 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */,
 				C33D30272AACD1830039B426 /* PersistenceController.swift */,
 				C33D30292AACDCDE0039B426 /* RestaurantItem.swift */,
 				C35F030A2AB8B21C00CE0E7B /* FoodData.swift */,
 				C357838C2AC499E60099FD5A /* Permission.swift */,
 				C357838E2AC57F3D0099FD5A /* QRScannerDelegate.swift */,
+				C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,7 +176,6 @@
 			children = (
 				C33D302E2AACE2220039B426 /* RestaurantListViewModel.swift */,
 				C33D30322AACE6150039B426 /* RestaurantDetailViewModel.swift */,
-				C36526152AB0BDC3001B5931 /* RestaurantPopupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,10 +189,31 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		C36ABB012AC7251000DE116C /* UIItems */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */,
+				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
+				C33D30382AACF3AE0039B426 /* CustomTextFields.swift */,
+				C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */,
+				C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */,
+				C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */,
+			);
+			path = UIItems;
+			sourceTree = "<group>";
+		};
+		C36ABB022AC7254900DE116C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */,
+				C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		C3947A022AA9BB2C00561D26 = {
 			isa = PBXGroup;
 			children = (
-				C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */,
 				C3947A0D2AA9BB2C00561D26 /* SushiTracker */,
 				C3947A1E2AA9BB2D00561D26 /* SushiTrackerTests */,
 				C3947A282AA9BB2D00561D26 /* SushiTrackerUITests */,
@@ -214,14 +234,12 @@
 		C3947A0D2AA9BB2C00561D26 /* SushiTracker */ = {
 			isa = PBXGroup;
 			children = (
-				C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */,
-				C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */,
+				C36ABB022AC7254900DE116C /* CoreData */,
 				C33D303A2AACF9960039B426 /* Info.plist */,
 				C33D302D2AACE2140039B426 /* ViewModel */,
 				C33D302C2AACE1F10039B426 /* Model */,
 				C33D302B2AACE19E0039B426 /* Views */,
 				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
-				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
 				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
 			);
@@ -231,6 +249,7 @@
 		C3947A142AA9BB2D00561D26 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
 				C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -256,18 +275,12 @@
 		C3AF010B2AB203EA007E9D35 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
-				C33D30382AACF3AE0039B426 /* CustomTextFields.swift */,
+				C36ABB012AC7251000DE116C /* UIItems */,
 				C3DB4F742AAE379D006CBD40 /* MapKit.swift */,
 				C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */,
-				C3AF01072AB1CC39007E9D35 /* CustomDraggableView.swift */,
-				C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */,
 				C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */,
-				C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */,
 				C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */,
 				C3F96FAB2AC5AB9C0072DA42 /* Extensions+Views.swift */,
-				C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */,
-				C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -415,10 +428,8 @@
 			files = (
 				C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */,
 				C33D30392AACF3AE0039B426 /* CustomTextFields.swift in Sources */,
-				C3AF01082AB1CC39007E9D35 /* CustomDraggableView.swift in Sources */,
 				C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */,
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
-				C36526162AB0BDC3001B5931 /* RestaurantPopupViewModel.swift in Sources */,
 				C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */,
 				C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */,
 				C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */,
@@ -434,6 +445,7 @@
 				C3F96FA82AC593FF0072DA42 /* QRCodeButton.swift in Sources */,
 				C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */,
 				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
+				C326CB8F2ACC7A3900B8CBC8 /* Annotation.swift in Sources */,
 				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
 				C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */,
 				C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */,
@@ -622,9 +634,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,9 +671,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
