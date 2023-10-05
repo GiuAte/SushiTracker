@@ -71,12 +71,12 @@ struct RestaurantDetailView: View {
                 
                 HStack {
                     QRCodeButton()
-                        .padding(.bottom, 80)
+                        .padding(.bottom, 45)
                     Spacer()
                     FloatingButtonView()
-                        .padding(.bottom, 80)
+                        .padding(.bottom, 45)
                 }
-                //.padding()
+                .padding()
             }
             .padding(30)
             .background(GradientBackgroundView())

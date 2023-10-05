@@ -29,7 +29,7 @@ struct CustomTextField: UIViewRepresentable {
         textField.delegate = context.coordinator
         textField.tag = tag
         textField.borderStyle = .roundedRect
-        textField.backgroundColor = UIColor.white
+        //textField.backgroundColor = UIColor.white
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
@@ -68,7 +68,7 @@ struct CustomTextField: UIViewRepresentable {
                 }
                 return true
             } else if parent.returnKeyType == .done {
-                // Chiudi la tastiera quando viene premuto "Invio"
+    
                 textField.resignFirstResponder()
                 return true
             }

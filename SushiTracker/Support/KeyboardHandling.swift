@@ -10,6 +10,8 @@ import UIKit
 
 class KeyboardHandling: ObservableObject {
     @Published var isKeyboardVisible = false
+    @Published var keyboardHeight: CGFloat = 0
+    @Published var viewOffset: CGFloat = 0
 
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -21,10 +23,16 @@ class KeyboardHandling: ObservableObject {
     }
 
     @objc func keyboardWillShow(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            keyboardHeight = keyboardSize.height
+            viewOffset = keyboardHeight * -1
+        }
         isKeyboardVisible = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
+        keyboardHeight = 0
+        viewOffset = 0
         isKeyboardVisible = false
     }
 

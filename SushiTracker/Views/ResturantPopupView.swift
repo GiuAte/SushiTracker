@@ -34,115 +34,106 @@ struct RestaurantPopupView: View {
     @FocusState private var isFocus: Bool
     
     var body: some View {
-            ZStack {
-                GradientBackgroundView()
+        VStack(alignment: .leading, spacing: 20) {
+            
+            Text("Dati del ristorante")
+                .font(.largeTitle)
+                .bold()
+                .fontDesign(.serif)
+                .foregroundStyle(Color.pink)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, alignment: .center)
 
-                VStack {
-                    Text("Dati del ristorante")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Nome")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                        
-                        TextField("Nome del ristorante", text: $restaurantName)
-                            .customStyle()
-                            .focused($isFocus)
-                        
+            Text("Nome")
+                .font(.headline)
+                .foregroundColor(.white)
+
+            TextField("Nome del ristorante", text: $restaurantName)
+                .customStyle()
+                .focused($isFocus)
+            
+            Text("Indirizzo")
+                .font(.headline)
+                .foregroundColor(.white)
+            
+            TextField("Indirizzo del ristorante", text: $restaurantAddress)
+                .customStyle()
+                .focused($focusField, equals: .address)
+                .onChange(of: restaurantAddress) { newValue in
+                    mapUpdateTimer?.invalidate()
+                    mapUpdateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                        geocodeAddress()
                     }
-                    .padding()
-                    
-                    VStack(alignment: .leading, spacing: 20) {
-                        Text("Indirizzo")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                        
-                        TextField("Indirizzo del ristorante", text: $restaurantAddress)
-                            .customStyle()
-                            .focused($focusField, equals: .address)
-                            .onChange(of: restaurantAddress) { newValue in
-                                mapUpdateTimer?.invalidate()
-                                mapUpdateTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-                                    geocodeAddress()
-                                }
-                            }
-                        
-                        Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: restaurantLocation, title: restaurantName)]) { annotation in
-                            MapMarker(coordinate: annotation.coordinate, tint: .red)
-                        }
-                        .frame(height: 150)
-                        .cornerRadius(10)
-                        .padding(20)
-                        .background(Color.clear)
-                        .shadow(radius: 5)
-                    }
-                    .padding()
-                    
-                    Picker("Valutazione", selection: $selectedRating) {
-                        ForEach(1..<6, id: \.self) { rating in
-                            if selectedRating >= rating {
-                                Image("star_filled")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 30, height: 30)
-                            } else {
-                                Image("star_empty")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 30, height: 30)
-                            }
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding()
-                    
-                    Button(action: {
-                        if restaurantName.isEmpty || restaurantAddress.isEmpty {
-                            showAlert = true
-                        } else {
-                            let rating = selectedRating
-                            let newRestaurant = RestaurantItem(context: viewContext)
-                            newRestaurant.name = restaurantName
-                            newRestaurant.address = restaurantAddress
-                            newRestaurant.rating = Int16(rating)
-                            
-                            do {
-                                try viewContext.save()
-                                isPresented = false
-                            } catch {
-                                print("Errore durante il salvataggio: \(error)")
-                            }
-                        }
-                    }) {
-                        Text("Salva")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.green)
-                            )
-                    }
-                    .padding()
-                    
-                    Button(action: {
-                        isPresented = false
-                    }) {
-                        Text("Annulla")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.red)
-                            )
-                    }
-                    .padding()
                 }
+            Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: restaurantLocation, title: restaurantName)]) { annotation in
+                MapMarker(coordinate: annotation.coordinate, tint: .red)
+            }
+            .frame(height: 150)
+            .cornerRadius(10)
+            .background(Color.clear)
+            .shadow(radius: 5)
+            
+            Picker("Valutazione", selection: $selectedRating) {
+                ForEach(1..<6, id: \.self) { rating in
+                    if selectedRating >= rating {
+                        Image("star_filled")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                    } else {
+                        Image("star_empty")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30)
+                    }
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            Spacer()
+            Button(action: {
+                if restaurantName.isEmpty || restaurantAddress.isEmpty {
+                    showAlert = true
+                } else {
+                    let rating = selectedRating
+                    let newRestaurant = RestaurantItem(context: viewContext)
+                    newRestaurant.name = restaurantName
+                    newRestaurant.address = restaurantAddress
+                    newRestaurant.rating = Int16(rating)
+                    
+                    do {
+                        try viewContext.save()
+                        isPresented = false
+                    } catch {
+                        print("Errore durante il salvataggio: \(error)")
+                    }
+                }
+            }) {
+                Text("Salva")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.green)
+                    )
+            }
+            Button(action: {
+                isPresented = false
+            }) {
+                Text("Annulla")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.red)
+                    )
+            }
+            Spacer()
+        }
+                .padding()
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Errore"), message: Text("Inserisci entrambi i campi, quindi riprova"), dismissButton: .default(Text("OK")))
                 }
@@ -151,7 +142,9 @@ struct RestaurantPopupView: View {
                     restaurantAddress = ""
                     selectedRating = 0
                 }
-            }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(GradientBackgroundView())
+                .environmentObject(keyboardHandling)
         }
     
     private func geocodeAddress() {

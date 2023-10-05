@@ -25,6 +25,7 @@ struct RestaurantListView: View {
             .onDelete(perform: viewModel.deleteRestaurant)
             .padding(.bottom, 5)
         }
+        
         .onAppear {
             viewModel.loadRestaurants()
         }

@@ -29,8 +29,6 @@ struct ScannerView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        ZStack {
-            Color.white
         VStack(spacing: 8) {
             Button {
                 presentationMode.wrappedValue.dismiss()
@@ -151,9 +149,6 @@ struct ScannerView: View {
             }
         }
     }
-        .ignoresSafeArea()
-}
-    
     func reactivateCamera() {
         DispatchQueue.global(qos: .background).async {
             session.startRunning()
@@ -207,52 +202,53 @@ struct ScannerView: View {
             default: break
             }
         }
-    }
-    
-    /// Setup Fotocamera
-    func setupCamera() {
-        do {
-            /// Fotocamera posteriore
-            guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first else {
-                presentError("UNKNOWN DEVICE ERROR")
-                return
+        
+        
+        /// Setup Fotocamera
+        func setupCamera() {
+            do {
+                /// Fotocamera posteriore
+                guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first else {
+                    presentError("UNKNOWN DEVICE ERROR")
+                    return
+                }
+                
+                /// Camera Input
+                let input = try AVCaptureDeviceInput(device: device)
+                guard session.canAddInput(input), session.canAddOutput(qrOutput) else {
+                    presentError("UNKNOWN INPUT/OUTPUT ERROR")
+                    return
+                }
+                
+                
+                session.beginConfiguration()
+                session.addInput(input)
+                session.addOutput(qrOutput)
+                
+                qrOutput.metadataObjectTypes = [.qr]
+                
+                qrOutput.setMetadataObjectsDelegate(qrDelegate, queue: .main)
+                session.commitConfiguration()
+                
+                DispatchQueue.global(qos: .background).async {
+                    session.startRunning()
+                }
+                activateScannerAnimation()
+            } catch {
+                presentError(error.localizedDescription)
             }
-            
-            /// Camera Input
-            let input = try AVCaptureDeviceInput(device: device)
-            guard session.canAddInput(input), session.canAddOutput(qrOutput) else {
-                presentError("UNKNOWN INPUT/OUTPUT ERROR")
-                return
-            }
-            
-            
-            session.beginConfiguration()
-            session.addInput(input)
-            session.addOutput(qrOutput)
-            
-            qrOutput.metadataObjectTypes = [.qr]
-            
-            qrOutput.setMetadataObjectsDelegate(qrDelegate, queue: .main)
-            session.commitConfiguration()
-            
-            DispatchQueue.global(qos: .background).async {
-                session.startRunning()
-            }
-            activateScannerAnimation()
-        } catch {
-            presentError(error.localizedDescription)
+        }
+        
+        /// Presentazione Errore
+        func presentError(_ message: String) {
+            errorMessage = message
+            showError.toggle()
         }
     }
     
-    /// Presentazione Errore
-    func presentError(_ message: String) {
-        errorMessage = message
-        showError.toggle()
-    }
-}
-
-struct ScannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScannerView()
+    struct ScannerView_Previews: PreviewProvider {
+        static var previews: some View {
+            ScannerView()
+        }
     }
 }
