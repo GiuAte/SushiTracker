@@ -15,88 +15,86 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \RestaurantItem.name, ascending: true)],
         animation: .default)
     private var restaurants: FetchedResults<RestaurantItem>
-    @State private var isSearchBarVisible = false
-    @State private var lastOffset: CGFloat = 0.0
     @State private var showingRestaurantPopup = false
     @State private var searchText = ""
     @State private var open = false
+    @State private var isOnboardingCompleted = false
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemPink]
+        if let greenColor = UIColor(named: "Green"),
+        let searchBar = UIColor(named: "SearchBar"){
+            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: greenColor]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "Annulla"
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = searchBar
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
+        }
     }
     
     var body: some View {
-        VStack {
-            
-            if restaurants.isEmpty {
-                Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
-                    .foregroundColor(Color.white)
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding([.leading, .trailing], 20)
-            } else {
-                // MARK: PIETRO - Usa .searchable(text: $searchText)
-                // SearchBar(text: $searchText)
-                ZStack {
-                    if !filteredRestaurants.isEmpty {
-                        List {
-                            ForEach(filteredRestaurants, id: \.self) { restaurant in
-                                NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
-                                    RestaurantRowView(restaurant: restaurant)
-                                }
-                            }
-                            .onDelete(perform: deleteRestaurant)
-                        }
-                    } else if filteredRestaurants.isEmpty {
-                        Text("Nessun ristorante trovato")
-                            .foregroundColor(Color.black.opacity(0.5))
-                            .font(.headline)
+        NavigationStack {
+            if !isOnboardingCompleted {
+                    OnBoardingScreen(isOnboardingCompleted: $isOnboardingCompleted)
+                }  else {
+                VStack {
+                    if restaurants.isEmpty {
+                        Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
+                            .foregroundColor(Color("Green"))
+                            .font(.callout)
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .padding([.leading, .trailing], 20)
                     } else {
-                        GradientBackgroundView()
+                        // MARK: PIETRO - Usa .searchable(text: $searchText)
+                        // SearchBar(text: $searchText)
+                        ZStack {
+                            if !filteredRestaurants.isEmpty {
+                                List {
+                                    ForEach(filteredRestaurants, id: \.self) { restaurant in
+                                        NavigationLink(destination: RestaurantDetailView(viewModel: RestaurantDetailViewModel(restaurant: restaurant))) {
+                                            RestaurantRowView(restaurant: restaurant)
+                                        }
+                                    }
+                                    .onDelete(perform: deleteRestaurant)
+                                }
+                            } else if filteredRestaurants.isEmpty {
+                                Text("Nessun ristorante trovato")
+                                    .foregroundColor(Color.black.opacity(0.5))
+                                    .font(.headline)
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .padding([.leading, .trailing], 20)
+                            }
+                        }
+                    }
+                    
+                    Button(action: {
+                        withAnimation {
+                            showingRestaurantPopup.toggle()
+                        }
+                    }) {
+                        Image(systemName: "plus")
+                            .font(.system(size: 25))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color("Green"))
+                            .mask(Circle())
+                            .shadow(radius: 5)
+                            .zIndex(10)
+                    }
+                    .fullScreenCover(isPresented: $showingRestaurantPopup) {
+                        let restaurantModel = RestaurantModel()
+                        RestaurantPopupView(model: restaurantModel, isPresented: $showingRestaurantPopup).environment(\.managedObjectContext, viewContext)
                     }
                 }
-            }
-            
-            Button(action: {
-                withAnimation {
-                    showingRestaurantPopup.toggle()
-                }
-            }) {
-                Image(systemName: "plus")
-                    .font(.system(size: 25))
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.pink)
-                    .mask(Circle())
-                    .shadow(radius: 5)
-                    .zIndex(10)
-            }
-            .fullScreenCover(isPresented: $showingRestaurantPopup) {
-                let restaurantModel = RestaurantModel()
-                RestaurantPopupView(model: restaurantModel, isPresented: $showingRestaurantPopup).environment(\.managedObjectContext, viewContext)
+                .scrollIndicators(.visible)
+                .scrollContentBackground(.hidden)
+                .navigationTitle("I Tuoi Ristoranti")
+                .navigationBarTitleDisplayMode(.large)
+                .searchable(text: $searchText, prompt: "Cerca")
+                .background(Color.accentColor)
             }
         }
-        .gesture(
-            TapGesture()
-                .onEnded { _ in
-                    keyboardHandling.dismissKeyboard()
-                }
-        )
-        .scrollContentBackground(.hidden)
-        .background(GradientBackgroundView())
-        .navigationTitle("I Tuoi Ristoranti")
-        .navigationBarTitleDisplayMode(.large)
-        //.preferredColorScheme(.light)
-        .searchable(text: $searchText, prompt: "Cerca")
-        
     }
     
     private func deleteRestaurant(at offsets: IndexSet) {

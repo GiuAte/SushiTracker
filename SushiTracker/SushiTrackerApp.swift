@@ -25,6 +25,7 @@ struct SushiTrackerApp: App {
             // MARK: PIETRO - Includi la NavigationView qui. Così non devi poi riportarla ovunque
             NavigationStack {
                 ContentView()
+                
             }
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
             .environmentObject(keyboardHandling)

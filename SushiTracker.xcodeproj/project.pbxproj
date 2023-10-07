@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */; };
+		C30EE6232AD06B3C00929EC6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE6222AD06B3C00929EC6 /* SplashScreenView.swift */; };
+		C30EE6262AD074EA00929EC6 /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE6252AD074EA00929EC6 /* OnBoardingScreen.swift */; };
+		C30EE6292AD0756400929EC6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C30EE6282AD0756400929EC6 /* Lottie */; };
+		C30EE62B2AD0759600929EC6 /* ResizableLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE62A2AD0759600929EC6 /* ResizableLottieView.swift */; };
+		C30EE62D2AD075BF00929EC6 /* OnBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE62C2AD075BF00929EC6 /* OnBoardItem.swift */; };
+		C30EE6312AD0769100929EC6 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = C30EE6302AD0769100929EC6 /* Delivery.json */; };
 		C326CB8F2ACC7A3900B8CBC8 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */; };
 		C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
 		C33D301D2AACC8020039B426 /* SushiDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33D301A2AACC5950039B426 /* SushiDataModel.xcdatamodeld */; };
@@ -24,7 +30,6 @@
 		C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */; };
 		C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */; };
 		C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F030A2AB8B21C00CE0E7B /* FoodData.swift */; };
-		C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF742AAB658400BC16B2 /* SearchBar.swift */; };
 		C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */; };
 		C3937CE32AAF6440002D1CD6 /* KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */; };
 		C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */; };
@@ -37,6 +42,9 @@
 		C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */; };
 		C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */; };
 		C3947A3F2AAA0CBE00561D26 /* RestaurantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */; };
+		C3AEE8652AD1491900909167 /* VaiAlRistorante.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AEE8642AD1491900909167 /* VaiAlRistorante.json */; };
+		C3AEE8682AD150A000909167 /* Rivedi.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AEE8672AD150A000909167 /* Rivedi.json */; };
+		C3AEE86C2AD1540F00909167 /* Enjoy.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AEE86B2AD1540F00909167 /* Enjoy.json */; };
 		C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */; };
 		C3AF01112AB2102D007E9D35 /* ListInsideScontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */; };
 		C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */; };
@@ -70,6 +78,11 @@
 
 /* Begin PBXFileReference section */
 		C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButton.swift; sourceTree = "<group>"; };
+		C30EE6222AD06B3C00929EC6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		C30EE6252AD074EA00929EC6 /* OnBoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreen.swift; sourceTree = "<group>"; };
+		C30EE62A2AD0759600929EC6 /* ResizableLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableLottieView.swift; sourceTree = "<group>"; };
+		C30EE62C2AD075BF00929EC6 /* OnBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardItem.swift; sourceTree = "<group>"; };
+		C30EE6302AD0769100929EC6 /* Delivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
 		C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		C33D301B2AACC5950039B426 /* SushiDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SushiDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C33D30272AACD1830039B426 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -85,7 +98,6 @@
 		C35F03062AB8ABBD00CE0E7B /* FoodItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemManager.swift; sourceTree = "<group>"; };
 		C35F03082AB8ABEC00CE0E7B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C35F030A2AB8B21C00CE0E7B /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
-		C38FAF742AAB658400BC16B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandling.swift; sourceTree = "<group>"; };
 		C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +113,10 @@
 		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
 		C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRowView.swift; sourceTree = "<group>"; };
+		C3AEE8642AD1491900909167 /* VaiAlRistorante.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VaiAlRistorante.json; sourceTree = "<group>"; };
+		C3AEE8662AD14A5D00909167 /* AnimatedOnBoardingScreen.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = AnimatedOnBoardingScreen.entitlements; sourceTree = SOURCE_ROOT; };
+		C3AEE8672AD150A000909167 /* Rivedi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Rivedi.json; sourceTree = "<group>"; };
+		C3AEE86B2AD1540F00909167 /* Enjoy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Enjoy.json; sourceTree = "<group>"; };
 		C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScontrinoView.swift; sourceTree = "<group>"; };
 		C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInsideScontrino.swift; sourceTree = "<group>"; };
 		C3D9E7AD2AB86B15001728B9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -120,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */,
+				C30EE6292AD0756400929EC6 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +157,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C30EE6242AD074DB00929EC6 /* OnBoardScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C30EE62E2AD075EA00929EC6 /* LottieFiles */,
+				C30EE6252AD074EA00929EC6 /* OnBoardingScreen.swift */,
+				C30EE62A2AD0759600929EC6 /* ResizableLottieView.swift */,
+			);
+			path = OnBoardScreen;
+			sourceTree = "<group>";
+		};
+		C30EE62E2AD075EA00929EC6 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C3AEE8672AD150A000909167 /* Rivedi.json */,
+				C30EE6302AD0769100929EC6 /* Delivery.json */,
+				C3AEE86B2AD1540F00909167 /* Enjoy.json */,
+				C3AEE8642AD1491900909167 /* VaiAlRistorante.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
 		C33D302B2AACE19E0039B426 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C30EE6242AD074DB00929EC6 /* OnBoardScreen */,
 				C357838B2AC495C60099FD5A /* QRCode */,
 				C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */,
 				C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */,
@@ -153,6 +192,7 @@
 				C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */,
 				C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */,
 				C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */,
+				C30EE6222AD06B3C00929EC6 /* SplashScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +207,7 @@
 				C357838C2AC499E60099FD5A /* Permission.swift */,
 				C357838E2AC57F3D0099FD5A /* QRScannerDelegate.swift */,
 				C326CB8E2ACC7A3900B8CBC8 /* Annotation.swift */,
+				C30EE62C2AD075BF00929EC6 /* OnBoardItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */,
-				C38FAF742AAB658400BC16B2 /* SearchBar.swift */,
 				C33D30382AACF3AE0039B426 /* CustomTextFields.swift */,
 				C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */,
 				C3F96FAD2AC5C9000072DA42 /* GradiendBackgroundView.swift */,
@@ -266,6 +306,7 @@
 		C3947A282AA9BB2D00561D26 /* SushiTrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				C3AEE8662AD14A5D00909167 /* AnimatedOnBoardingScreen.entitlements */,
 				C3947A292AA9BB2D00561D26 /* SushiTrackerUITests.swift */,
 				C3947A2B2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift */,
 			);
@@ -303,6 +344,7 @@
 			name = SushiTracker;
 			packageProductDependencies = (
 				C3EA6F472AB31EF5009FF0BB /* FloatingButton */,
+				C30EE6282AD0756400929EC6 /* Lottie */,
 			);
 			productName = SushiTracker;
 			productReference = C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */;
@@ -382,6 +424,7 @@
 			packageReferences = (
 				C3EA6F462AB31EF5009FF0BB /* XCRemoteSwiftPackageReference "FloatingButton" */,
 				C344278B2AC4831700C9A60A /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				C30EE6272AD0756400929EC6 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = C3947A0C2AA9BB2C00561D26 /* Products */;
 			projectDirPath = "";
@@ -399,9 +442,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AEE8652AD1491900909167 /* VaiAlRistorante.json in Resources */,
+				C3AEE86C2AD1540F00909167 /* Enjoy.json in Resources */,
+				C30EE6312AD0769100929EC6 /* Delivery.json in Resources */,
 				C3F96FAA2AC59AAD0072DA42 /* buttonpressed.mp3 in Resources */,
 				C3947A162AA9BB2D00561D26 /* Preview Assets.xcassets in Resources */,
 				C3947A132AA9BB2D00561D26 /* Assets.xcassets in Resources */,
+				C3AEE8682AD150A000909167 /* Rivedi.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +479,13 @@
 				C33D301C2AACC5950039B426 /* SushiDataModel.xcdatamodeld in Sources */,
 				C35F03072AB8ABBD00CE0E7B /* FoodItemManager.swift in Sources */,
 				C35F030B2AB8B21C00CE0E7B /* FoodData.swift in Sources */,
+				C30EE6232AD06B3C00929EC6 /* SplashScreenView.swift in Sources */,
+				C30EE62B2AD0759600929EC6 /* ResizableLottieView.swift in Sources */,
 				C35F03092AB8ABEC00CE0E7B /* CoreDataStack.swift in Sources */,
 				C3D9E7AE2AB86B15001728B9 /* SoundManager.swift in Sources */,
 				C35783882AC48EAD0099FD5A /* ScannerView.swift in Sources */,
 				C3947A392AAA01CB00561D26 /* ResturantPopupView.swift in Sources */,
+				C30EE62D2AD075BF00929EC6 /* OnBoardItem.swift in Sources */,
 				C33D302F2AACE2220039B426 /* RestaurantListViewModel.swift in Sources */,
 				C3947A3D2AAA0C9400561D26 /* RestaurantDetailView.swift in Sources */,
 				C33D30282AACD1830039B426 /* PersistenceController.swift in Sources */,
@@ -446,11 +496,11 @@
 				C3947A112AA9BB2C00561D26 /* ContentView.swift in Sources */,
 				C33D30332AACE6150039B426 /* RestaurantDetailViewModel.swift in Sources */,
 				C326CB8F2ACC7A3900B8CBC8 /* Annotation.swift in Sources */,
-				C38FAF752AAB658400BC16B2 /* SearchBar.swift in Sources */,
 				C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */,
 				C3AF010A2AB1E5CA007E9D35 /* ScontrinoView.swift in Sources */,
 				C357838F2AC57F3D0099FD5A /* QRScannerDelegate.swift in Sources */,
 				C38FAF772AAB710900BC16B2 /* RestaurantListView.swift in Sources */,
+				C30EE6262AD074EA00929EC6 /* OnBoardingScreen.swift in Sources */,
 				C33D302A2AACDCDE0039B426 /* RestaurantItem.swift in Sources */,
 				C3F96FAC2AC5AB9C0072DA42 /* Extensions+Views.swift in Sources */,
 				C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */,
@@ -807,6 +857,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C30EE6272AD0756400929EC6 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 		C344278B2AC4831700C9A60A /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
@@ -826,6 +884,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C30EE6282AD0756400929EC6 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30EE6272AD0756400929EC6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		C3EA6F472AB31EF5009FF0BB /* FloatingButton */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3EA6F462AB31EF5009FF0BB /* XCRemoteSwiftPackageReference "FloatingButton" */;
