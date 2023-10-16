@@ -52,6 +52,7 @@
 		C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */; };
 		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
 		C3E5A5342ADD332A00C13FCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E5A5332ADD332A00C13FCD /* Images.xcassets */; };
+		C3E5A53A2ADD640500C13FCD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5A5392ADD640500C13FCD /* LocationManager.swift */; };
 		C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = C3EA6F472AB31EF5009FF0BB /* FloatingButton */; };
 		C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */; };
 		C3F96FA82AC593FF0072DA42 /* QRCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */; };
@@ -125,6 +126,7 @@
 		C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkView.swift; sourceTree = "<group>"; };
 		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		C3E5A5332ADD332A00C13FCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Images.xcassets; sourceTree = "<group>"; };
+		C3E5A5392ADD640500C13FCD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeButton.swift; sourceTree = "<group>"; };
 		C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonpressed.mp3; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
 				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
+				C3E5A5392ADD640500C13FCD /* LocationManager.swift */,
 			);
 			path = SushiTracker;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				C3F96FAE2AC5C9000072DA42 /* GradiendBackgroundView.swift in Sources */,
 				C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */,
 				C3947A0F2AA9BB2C00561D26 /* SushiTrackerApp.swift in Sources */,
+				C3E5A53A2ADD640500C13FCD /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,7 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;
@@ -719,7 +723,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;

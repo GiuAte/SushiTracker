@@ -82,7 +82,7 @@ struct RestaurantDetailView: View {
             .background(Color.accentColor)
 //            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .toolbarRole(.editor)
+        .toolbarRole(.automatic)
     }
     
     private func geocodeAddress() {
