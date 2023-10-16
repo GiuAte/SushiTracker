@@ -51,6 +51,7 @@
 		C3D9E7B02AB870D8001728B9 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */; };
 		C3D9E7B22AB87101001728B9 /* AddDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */; };
 		C3DB4F752AAE379D006CBD40 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB4F742AAE379D006CBD40 /* MapKit.swift */; };
+		C3E5A5342ADD332A00C13FCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E5A5332ADD332A00C13FCD /* Images.xcassets */; };
 		C3EA6F482AB31EF5009FF0BB /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = C3EA6F472AB31EF5009FF0BB /* FloatingButton */; };
 		C3EA6F4F2AB34B00009FF0BB /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */; };
 		C3F96FA82AC593FF0072DA42 /* QRCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */; };
@@ -100,14 +101,14 @@
 		C35F030A2AB8B21C00CE0E7B /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		C3937CE22AAF6440002D1CD6 /* KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandling.swift; sourceTree = "<group>"; };
-		C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3947A0B2AA9BB2C00561D26 /* SushiMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerApp.swift; sourceTree = "<group>"; };
 		C3947A102AA9BB2C00561D26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3947A122AA9BB2D00561D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C3947A1B2AA9BB2D00561D26 /* SushiTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3947A1B2AA9BB2D00561D26 /* SushiMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A1F2AA9BB2D00561D26 /* SushiTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerTests.swift; sourceTree = "<group>"; };
-		C3947A252AA9BB2D00561D26 /* SushiTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3947A252AA9BB2D00561D26 /* SushiMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SushiMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3947A292AA9BB2D00561D26 /* SushiTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerUITests.swift; sourceTree = "<group>"; };
 		C3947A2B2AA9BB2D00561D26 /* SushiTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantPopupView.swift; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkView.swift; sourceTree = "<group>"; };
 		C3DB4F742AAE379D006CBD40 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
+		C3E5A5332ADD332A00C13FCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Images.xcassets; sourceTree = "<group>"; };
 		C3EA6F4E2AB34B00009FF0BB /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		C3F96FA72AC593FF0072DA42 /* QRCodeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeButton.swift; sourceTree = "<group>"; };
 		C3F96FA92AC59AAD0072DA42 /* buttonpressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonpressed.mp3; sourceTree = "<group>"; };
@@ -264,9 +266,9 @@
 		C3947A0C2AA9BB2C00561D26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */,
-				C3947A1B2AA9BB2D00561D26 /* SushiTrackerTests.xctest */,
-				C3947A252AA9BB2D00561D26 /* SushiTrackerUITests.xctest */,
+				C3947A0B2AA9BB2C00561D26 /* SushiMe.app */,
+				C3947A1B2AA9BB2D00561D26 /* SushiMeTests.xctest */,
+				C3947A252AA9BB2D00561D26 /* SushiMeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +291,7 @@
 		C3947A142AA9BB2D00561D26 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C3E5A5332ADD332A00C13FCD /* Images.xcassets */,
 				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
 				C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */,
 			);
@@ -329,9 +332,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3947A0A2AA9BB2C00561D26 /* SushiTracker */ = {
+		C3947A0A2AA9BB2C00561D26 /* SushiMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3947A2F2AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTracker" */;
+			buildConfigurationList = C3947A2F2AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMe" */;
 			buildPhases = (
 				C3947A072AA9BB2C00561D26 /* Sources */,
 				C3947A082AA9BB2C00561D26 /* Frameworks */,
@@ -341,18 +344,18 @@
 			);
 			dependencies = (
 			);
-			name = SushiTracker;
+			name = SushiMe;
 			packageProductDependencies = (
 				C3EA6F472AB31EF5009FF0BB /* FloatingButton */,
 				C30EE6282AD0756400929EC6 /* Lottie */,
 			);
 			productName = SushiTracker;
-			productReference = C3947A0B2AA9BB2C00561D26 /* SushiTracker.app */;
+			productReference = C3947A0B2AA9BB2C00561D26 /* SushiMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C3947A1A2AA9BB2D00561D26 /* SushiTrackerTests */ = {
+		C3947A1A2AA9BB2D00561D26 /* SushiMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3947A322AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTrackerTests" */;
+			buildConfigurationList = C3947A322AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMeTests" */;
 			buildPhases = (
 				C3947A172AA9BB2D00561D26 /* Sources */,
 				C3947A182AA9BB2D00561D26 /* Frameworks */,
@@ -363,14 +366,14 @@
 			dependencies = (
 				C3947A1D2AA9BB2D00561D26 /* PBXTargetDependency */,
 			);
-			name = SushiTrackerTests;
+			name = SushiMeTests;
 			productName = SushiTrackerTests;
-			productReference = C3947A1B2AA9BB2D00561D26 /* SushiTrackerTests.xctest */;
+			productReference = C3947A1B2AA9BB2D00561D26 /* SushiMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3947A242AA9BB2D00561D26 /* SushiTrackerUITests */ = {
+		C3947A242AA9BB2D00561D26 /* SushiMeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3947A352AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTrackerUITests" */;
+			buildConfigurationList = C3947A352AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMeUITests" */;
 			buildPhases = (
 				C3947A212AA9BB2D00561D26 /* Sources */,
 				C3947A222AA9BB2D00561D26 /* Frameworks */,
@@ -381,9 +384,9 @@
 			dependencies = (
 				C3947A272AA9BB2D00561D26 /* PBXTargetDependency */,
 			);
-			name = SushiTrackerUITests;
+			name = SushiMeUITests;
 			productName = SushiTrackerUITests;
-			productReference = C3947A252AA9BB2D00561D26 /* SushiTrackerUITests.xctest */;
+			productReference = C3947A252AA9BB2D00561D26 /* SushiMeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -409,7 +412,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3947A062AA9BB2C00561D26 /* Build configuration list for PBXProject "SushiTracker" */;
+			buildConfigurationList = C3947A062AA9BB2C00561D26 /* Build configuration list for PBXProject "SushiMe" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -430,9 +433,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3947A0A2AA9BB2C00561D26 /* SushiTracker */,
-				C3947A1A2AA9BB2D00561D26 /* SushiTrackerTests */,
-				C3947A242AA9BB2D00561D26 /* SushiTrackerUITests */,
+				C3947A0A2AA9BB2C00561D26 /* SushiMe */,
+				C3947A1A2AA9BB2D00561D26 /* SushiMeTests */,
+				C3947A242AA9BB2D00561D26 /* SushiMeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AEE8652AD1491900909167 /* VaiAlRistorante.json in Resources */,
+				C3E5A5342ADD332A00C13FCD /* Images.xcassets in Resources */,
 				C3AEE86C2AD1540F00909167 /* Enjoy.json in Resources */,
 				C30EE6312AD0769100929EC6 /* Delivery.json in Resources */,
 				C3F96FAA2AC59AAD0072DA42 /* buttonpressed.mp3 in Resources */,
@@ -536,12 +540,12 @@
 /* Begin PBXTargetDependency section */
 		C3947A1D2AA9BB2D00561D26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3947A0A2AA9BB2C00561D26 /* SushiTracker */;
+			target = C3947A0A2AA9BB2C00561D26 /* SushiMe */;
 			targetProxy = C3947A1C2AA9BB2D00561D26 /* PBXContainerItemProxy */;
 		};
 		C3947A272AA9BB2D00561D26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3947A0A2AA9BB2C00561D26 /* SushiTracker */;
+			target = C3947A0A2AA9BB2C00561D26 /* SushiMe */;
 			targetProxy = C3947A262AA9BB2D00561D26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -669,11 +673,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SushiTracker/Info.plist;
@@ -694,11 +700,14 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -706,11 +715,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SushiTracker/Info.plist;
@@ -731,11 +742,14 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -746,7 +760,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -755,7 +769,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SushiTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SushiMe";
 			};
 			name = Debug;
 		};
@@ -766,7 +780,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -775,7 +789,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SushiTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SushiMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SushiMe";
 			};
 			name = Release;
 		};
@@ -785,7 +799,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerUITests;
@@ -803,7 +817,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q7W3VFRJN2;
+				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerUITests;
@@ -818,7 +832,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3947A062AA9BB2C00561D26 /* Build configuration list for PBXProject "SushiTracker" */ = {
+		C3947A062AA9BB2C00561D26 /* Build configuration list for PBXProject "SushiMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3947A2D2AA9BB2D00561D26 /* Debug */,
@@ -827,7 +841,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3947A2F2AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTracker" */ = {
+		C3947A2F2AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3947A302AA9BB2D00561D26 /* Debug */,
@@ -836,7 +850,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3947A322AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTrackerTests" */ = {
+		C3947A322AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3947A332AA9BB2D00561D26 /* Debug */,
@@ -845,7 +859,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3947A352AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiTrackerUITests" */ = {
+		C3947A352AA9BB2D00561D26 /* Build configuration list for PBXNativeTarget "SushiMeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3947A362AA9BB2D00561D26 /* Debug */,

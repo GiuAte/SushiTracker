@@ -25,9 +25,9 @@ struct QRCodeButton: View {
                         .font(.system(size: 24, weight: .bold))
                 }
                 .padding()
-                .background(Color.pink)
+                .background(Color("Green"))
                 .mask(Circle())
-                .shadow(color: Color.pink, radius: 10)
+                .shadow(color: Color("Green"), radius: 10)
                 .zIndex(10)
                 .fullScreenCover(isPresented: $isScannerViewPresented) {
                     ScannerView()

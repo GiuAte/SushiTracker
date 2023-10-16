@@ -29,7 +29,7 @@ struct FloatingButtonView: View {
                         .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
                 }
                 .padding()
-                .background(Color.pink)
+                .background(Color("Green"))
                 .mask(Circle())
                 .shadow(color: Color.pink, radius: 10)
                 .zIndex(10)

@@ -1,12 +1,4 @@
-//
-//  ContentView.swift
-//  SushiTracker
-//
-//  Created by Giulio Aterno on 07/09/23.
-//
-
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -17,25 +9,24 @@ struct ContentView: View {
     private var restaurants: FetchedResults<RestaurantItem>
     @State private var showingRestaurantPopup = false
     @State private var searchText = ""
-    @State private var open = false
-    @State private var isOnboardingCompleted = false
+    @State private var isOnboardingCompleted = UserDefaults.standard.bool(forKey: "isOnboardingCompleted")
     
     init() {
         if let greenColor = UIColor(named: "Green"),
-        let searchBar = UIColor(named: "SearchBar"){
+            let searchBar = UIColor(named: "SearchBar") {
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: greenColor]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "Annulla"
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = searchBar
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "Annulla"
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = searchBar
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
         }
     }
     
     var body: some View {
         NavigationStack {
             if !isOnboardingCompleted {
-                    OnBoardingScreen(isOnboardingCompleted: $isOnboardingCompleted)
-                }  else {
+                OnBoardingScreen(isOnboardingCompleted: $isOnboardingCompleted)
+            } else {
                 VStack {
                     if restaurants.isEmpty {
                         Text("Clicca l'icona in basso per aggiungere il tuo ristorante preferito ed iniziare ad inserire i tuoi ordini! 🥢")
@@ -117,15 +108,6 @@ struct ContentView: View {
             return restaurants.filter { restaurant in
                 restaurant.name!.localizedCaseInsensitiveContains(searchText)
             }
-        }
-    }
-    
-    func shouldShowSearchBarOnScroll(offset: CGFloat) -> Bool {
-        let scrollThreshold: CGFloat = 20.0
-        if offset > scrollThreshold {
-            return true
-        } else {
-            return false
         }
     }
 }

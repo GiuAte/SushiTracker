@@ -70,7 +70,7 @@ struct ScannerView: View {
                         
                         RoundedRectangle(cornerRadius: 2, style: .circular)
                             .trim(from: 0.61, to: 0.64)
-                            .stroke(Color("Pink"), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                            .stroke(Color("Green"), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .rotationEffect(.init(degrees: rotation))
                     }
                 }
@@ -79,7 +79,7 @@ struct ScannerView: View {
                 /// Animazione Scanner
                 .overlay(alignment: .top, content: {
                     Rectangle()
-                        .fill(Color("Pink"))
+                        .fill(Color("Green"))
                         .frame(height: 2.5)
                         .shadow(color: .black.opacity(0.8), radius: 8, x: 0, y: isScanning ? 15 : -15)
                         .offset(y: isScanning ? sqareWidth : 0)

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SushiTracker
+@testable import SushiMe
 
 final class SushiTrackerTests: XCTestCase {
 

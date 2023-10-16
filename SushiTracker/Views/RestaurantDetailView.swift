@@ -28,7 +28,7 @@ struct RestaurantDetailView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .fontDesign(.serif)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(Color("Green"))
                     .frame(maxWidth: .infinity)
                     .minimumScaleFactor(0.8)
                 
@@ -36,7 +36,7 @@ struct RestaurantDetailView: View {
                     .font(.body)
                     .fontWeight(.light)
                     .fontDesign(.rounded)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .frame(maxWidth: .infinity)
                     .minimumScaleFactor(0.8)
                 
@@ -44,7 +44,7 @@ struct RestaurantDetailView: View {
                     Text("\(viewModel.rating)/5")
                         .font(.subheadline)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                     
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
@@ -79,7 +79,7 @@ struct RestaurantDetailView: View {
                 .padding()
             }
             .padding(30)
-            .background(GradientBackgroundView())
+            .background(Color.accentColor)
 //            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .toolbarRole(.editor)
