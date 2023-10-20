@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C302A5C22AE2B75B00978EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3947A122AA9BB2D00561D26 /* Assets.xcassets */; };
+		C302A5C32AE2B75C00978EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3947A122AA9BB2D00561D26 /* Assets.xcassets */; };
 		C303CEAF2AC5D9350056EE68 /* RoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303CEAE2AC5D9350056EE68 /* RoundedRectangleButton.swift */; };
 		C30EE6232AD06B3C00929EC6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE6222AD06B3C00929EC6 /* SplashScreenView.swift */; };
 		C30EE6262AD074EA00929EC6 /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30EE6252AD074EA00929EC6 /* OnBoardingScreen.swift */; };
@@ -167,6 +169,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C302A5C42AE2C5D600978EDA /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */,
+				C3947A102AA9BB2C00561D26 /* ContentView.swift */,
+				C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
+		C302A5C52AE2C5FA00978EDA /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */,
+				C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */,
+				C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */,
+				C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */,
+				C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */,
+				C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		C302A5C62AE2C83A00978EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C30EE6242AD074DB00929EC6 /* OnBoardScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,15 +225,8 @@
 			children = (
 				C30EE6242AD074DB00929EC6 /* OnBoardScreen */,
 				C357838B2AC495C60099FD5A /* QRCode */,
-				C38FAF762AAB710900BC16B2 /* RestaurantListView.swift */,
-				C3947A3C2AAA0C9400561D26 /* RestaurantDetailView.swift */,
-				C3947A102AA9BB2C00561D26 /* ContentView.swift */,
-				C3947A3E2AAA0CBE00561D26 /* RestaurantRowView.swift */,
-				C3947A382AAA01CB00561D26 /* ResturantPopupView.swift */,
-				C3AF01092AB1E5CA007E9D35 /* ScontrinoView.swift */,
-				C3AF01102AB2102D007E9D35 /* ListInsideScontrino.swift */,
-				C3D9E7AF2AB870D7001728B9 /* AddFoodView.swift */,
-				C3D9E7B12AB87101001728B9 /* AddDrinkView.swift */,
+				C302A5C42AE2C5D600978EDA /* Main Screens */,
+				C302A5C52AE2C5FA00978EDA /* Items */,
 				C30EE6222AD06B3C00929EC6 /* SplashScreenView.swift */,
 			);
 			path = Views;
@@ -271,6 +296,7 @@
 				C3947A1E2AA9BB2D00561D26 /* SushiTrackerTests */,
 				C3947A282AA9BB2D00561D26 /* SushiTrackerUITests */,
 				C3947A0C2AA9BB2C00561D26 /* Products */,
+				C302A5C62AE2C83A00978EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,7 +318,6 @@
 				C33D302D2AACE2140039B426 /* ViewModel */,
 				C33D302C2AACE1F10039B426 /* Model */,
 				C33D302B2AACE19E0039B426 /* Views */,
-				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
 				C3AF010B2AB203EA007E9D35 /* Support */,
 				C3947A142AA9BB2D00561D26 /* Preview Content */,
 				C3E5A5392ADD640500C13FCD /* LocationManager.swift */,
@@ -306,6 +331,7 @@
 				C3E5A5332ADD332A00C13FCD /* Images.xcassets */,
 				C3947A122AA9BB2D00561D26 /* Assets.xcassets */,
 				C3947A152AA9BB2D00561D26 /* Preview Assets.xcassets */,
+				C3947A0E2AA9BB2C00561D26 /* SushiTrackerApp.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -425,7 +451,7 @@
 				};
 			};
 			buildConfigurationList = C3947A062AA9BB2C00561D26 /* Build configuration list for PBXProject "SushiMe" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -472,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C302A5C22AE2B75B00978EDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C302A5C32AE2B75C00978EDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +721,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;
@@ -734,7 +762,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_ASSET_PATHS = "\"SushiTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				ENABLE_PREVIEWS = YES;
@@ -778,7 +806,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -798,7 +826,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -811,12 +839,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -829,12 +859,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z3264CP7F3;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiTrackerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.giulioaterno.SushiMeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

@@ -31,7 +31,7 @@ struct ScannerView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.white
+                Color("backgroundColor")
                     .ignoresSafeArea()
                 VStack(spacing: 8) {
                     Button {
