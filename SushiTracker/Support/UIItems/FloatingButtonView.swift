@@ -39,7 +39,7 @@ struct FloatingButtonView: View {
                     
                 }
                 .sheet(isPresented: $showAddFoodSheet) {
-                    AddFoodView(isPresented: $showAddFoodSheet)
+                    AddFoodView()
                         .presentationDetents([.height(200)])
                 }
                 
@@ -47,7 +47,7 @@ struct FloatingButtonView: View {
                     showAddDrinksSheet = true
                 }
                 .sheet(isPresented: $showAddDrinksSheet) {
-                    AddDrinksView(isPresented: $showAddDrinksSheet)
+                    AddDrinkView()
                         .presentationDetents([.height(200)])
                 }
             }

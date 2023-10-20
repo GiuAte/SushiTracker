@@ -5,43 +5,47 @@
 //  Created by Giulio Aterno on 07/09/23.
 //
 
-    import SwiftUI
-    import CoreData
+import SwiftUI
+import CoreData
 
-    struct RestaurantRowView: View {
+struct RestaurantRowView: View {
+    
+    var restaurant: RestaurantItem
+    
+    var body: some View {
         
-        var restaurant: RestaurantItem
-        
-        var body: some View {
+        HStack {
+            Image(systemName: "mappin.circle.fill")
+                .foregroundColor(.red)
+                .font(.system(size: 32))
             
-            HStack {
-                Image(systemName: "mappin.circle.fill")
-                    .foregroundColor(.red)
-                    .font(.system(size: 32))
+            VStack(alignment: .leading) {
+                Text(restaurant.name ?? "")
+                    .font(.headline)
                 
-                VStack(alignment: .leading) {
-                    Text(restaurant.name ?? "")
-                        .font(.headline)
-                        
-                    
-                    Text(restaurant.address ?? "")
-                        .font(.subheadline)
-                        .italic()
-                        .foregroundColor(.gray)
-                        .minimumScaleFactor(0.3)
-                        .lineLimit(1)
-                }
                 
-                Spacer()
-                
-                Text("\(restaurant.rating)/5")
+                Text(restaurant.address ?? "")
                     .font(.subheadline)
-                    .bold()
-                    
-                
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-                    .font(.system(size: 20))
+                    .italic()
+                    .foregroundColor(.gray)
+                    .minimumScaleFactor(0.3)
+                    .lineLimit(1)
             }
+            
+            Spacer()
+            
+            Text("\(restaurant.rating)/5")
+                .font(.subheadline)
+                .bold()
+            
+            
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+                .font(.system(size: 20))
         }
     }
+}
+
+#Preview {
+    RestaurantRowView(restaurant: RestaurantItem())
+}

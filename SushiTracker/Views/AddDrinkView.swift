@@ -6,54 +6,88 @@
 //
 
 import SwiftUI
+import CoreData
 
-struct AddDrinksView: View {
-    @Binding var isPresented: Bool
-    @State private var drinkName = ""
-    @State private var drinkPortions = ""
-    @State private var keyboardHeight: CGFloat = 0
-    @State private var value: CGFloat = 0
-    @EnvironmentObject var keyboardHandling: KeyboardHandling
+struct AddDrinkView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    @State private var isPresented = false
+    @State private var drinkName = ""
+    @State private var portionCount = ""
+    @Environment(\.managedObjectContext) private var managedObjectContext
+    @EnvironmentObject var foodData: FoodData
     
     var body: some View {
-        ZStack {
-            (Color("backgroundColor"))
-                .edgesIgnoringSafeArea(.all)
-            
+        ScrollView {
             VStack {
                 Text("Aggiungi bevande")
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundStyle(Color("Green"))
                     .padding(.top, 20)
                 
                 HStack {
-                    // MARK: PIETRO - Usa il CustomTextFieldModifier
-                    CustomTextField(placeholder: "Nome", text: $drinkName, returnKeyType: .next, tag: 1)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding([.horizontal, .bottom])
+                    TextField("Nome", text: $drinkName)
                         .keyboardType(.default)
-                    
-                    CustomTextField(placeholder: "Quantità", text: $drinkPortions, returnKeyType: .next, tag: 2)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding([.horizontal, .bottom])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxHeight: 40)
+                        .onSubmit {
+                            navigateToNextTextField(tag: 1)
+                        }
+                    
+                    TextField("Quantità", text: $portionCount)
                         .keyboardType(.numberPad)
+                        .padding([.horizontal, .bottom])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(maxHeight: 40)
+                        .onSubmit {
+                            hideKeyboard()
+                        }
                 }
                 
                 Button(action: {
-                    // Azione da eseguire quando viene premuto il bottone
+                    if let portionCount = Int(portionCount) {
+                        let newFoodItem = MyFoodItem(context: managedObjectContext)
+                        newFoodItem.name = drinkName
+                        newFoodItem.portionCount = Int16(portionCount)
+                        
+                        foodData.addFoodItem(newFoodItem)
+                        
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 }) {
                     Text("Aggiungi")
                         .fontWeight(.bold)
                         .padding()
-                        .background(Color.blue)
+                        .background(Color("Green"))
                         .foregroundColor(.white)
                         .cornerRadius(20)
                         .shadow(radius: 5)
+                    
                 }
                 .padding()
+                
             }
         }
-        .presentationDragIndicator(.visible)
+        
+        .background(Color.accentColor)
+        .ignoresSafeArea()
     }
+    
+    private func navigateToNextTextField(tag: Int) {
+        if let nextField = UIApplication.shared.windows.first?.rootViewController?.view.viewWithTag(tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            hideKeyboard()
+        }
+    }
+    
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+#Preview {
+    AddFoodView()
 }

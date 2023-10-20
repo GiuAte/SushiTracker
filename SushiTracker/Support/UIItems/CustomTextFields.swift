@@ -76,3 +76,7 @@ struct CustomTextField: UIViewRepresentable {
         }
     }
 }
+
+#Preview {
+    CustomTextField(placeholder: "Test", text: .constant("Ciao"), returnKeyType: .continue, tag: 1)
+}

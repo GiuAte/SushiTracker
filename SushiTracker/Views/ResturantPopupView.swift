@@ -76,6 +76,9 @@ struct RestaurantPopupView: View {
                     Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: [Annotation(coordinate: restaurantLocation, title: restaurantName)]) { annotation in
                         MapMarker(coordinate: annotation.coordinate, tint: .red)
                     }
+                    .onTapGesture {
+                        openMapsAppWithDestination()
+                    }
                     .overlay(
                         GeometryReader { geometry in
                             Path { path in
@@ -149,6 +152,7 @@ struct RestaurantPopupView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+            .background(Color.accentColor)
         }
         .background(Color.accentColor)
     }
@@ -187,6 +191,20 @@ struct RestaurantPopupView: View {
                 }
             }
         }
+    
+    private func openMapsAppWithDestination() {
+          let coordinates = "\(restaurantLocation.latitude),\(restaurantLocation.longitude)"
+          let address = restaurantAddress.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+
+          if let url = URL(string: "http://maps.apple.com/?daddr=\(address)&saddr=\(coordinates)") {
+              if UIApplication.shared.canOpenURL(url) {
+                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+              } else {
+                  // Gestisci il caso in cui l'app di Mappe non è disponibile
+                  print("L'app di Mappe non è disponibile.")
+              }
+          }
+      }
 
     private func resetFields() {
         restaurantName = ""

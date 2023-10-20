@@ -18,14 +18,12 @@ struct SushiTrackerApp: App {
     @StateObject var soundManager = SoundManager.shared
     
     // Crea un'istanza di FoodData con il contesto di Core Data
-    let foodData = FoodData(managedObjectContext: PersistenceController.shared.container.viewContext)
+    @StateObject var foodData = FoodData(managedObjectContext: PersistenceController.shared.container.viewContext)
 
     var body: some Scene {
         WindowGroup {
-            // MARK: PIETRO - Includi la NavigationView qui. Così non devi poi riportarla ovunque
             NavigationStack {
                 ContentView()
-                
             }
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
             .environmentObject(keyboardHandling)

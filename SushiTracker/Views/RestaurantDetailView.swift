@@ -12,10 +12,7 @@ import CoreLocation
 struct RestaurantDetailView: View {
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject var viewModel: RestaurantDetailViewModel
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 0, longitude: 0),
-        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-    )
+    @State private var region: MKCoordinateRegion?
     
     init(viewModel: RestaurantDetailViewModel) {
         self.viewModel = viewModel
@@ -36,7 +33,7 @@ struct RestaurantDetailView: View {
                     .font(.body)
                     .fontWeight(.light)
                     .fontDesign(.rounded)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("WhiteOrBlack"))
                     .frame(maxWidth: .infinity)
                     .minimumScaleFactor(0.8)
                 
@@ -44,29 +41,16 @@ struct RestaurantDetailView: View {
                     Text("\(viewModel.rating)/5")
                         .font(.subheadline)
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("WhiteOrBlack"))
                     
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
                         .font(.system(size: 15))
                 }
                 
-                Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.none), annotationItems: [Annotation(coordinate: viewModel.restaurantCoordinate ?? CLLocationCoordinate2D(), title: viewModel.name)]) { annotation in
-                    MapMarker(coordinate: annotation.coordinate, tint: .red)
-                }
-                .onAppear {
-                    geocodeAddress()
-                }
-                .onTapGesture {
-                    openMapsApp(coordinate: viewModel.restaurantCoordinate ?? CLLocationCoordinate2D(), name: viewModel.name)
-                }
-                .cornerRadius(10)
-                .frame(width: 330, height: 150)
-                .padding(20)
-                .background(Color.clear)
-                .shadow(radius: 5)
+                StaticMapView(address: viewModel.address)
                 
-                ScontrinoView()
+                TestView()
                     .frame(width: 350, height: 400)
                 
                 HStack {
@@ -80,39 +64,12 @@ struct RestaurantDetailView: View {
             }
             .padding(30)
             .background(Color.accentColor)
-//            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .toolbarRole(.automatic)
     }
-    
-    private func geocodeAddress() {
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(viewModel.address) { placemarks, error in
-            if let error = error {
-                print("Errore nella geocodifica: \(error.localizedDescription)")
-                return
-            }
-            
-            if let placemark = placemarks?.first, let location = placemark.location?.coordinate {
-                print("Coordinate ottenute: \(location.latitude), \(location.longitude)")
-                region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
-            } else {
-                print("Nessuna coordinata ottenuta dalla geocodifica.")
-            }
-        }
-    }
-    
-    private func openMapsApp(coordinate: CLLocationCoordinate2D, name: String) {
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate))
-        mapItem.name = name
-        if let appleMapsURL = URL(string: "http://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)") {
-            if UIApplication.shared.canOpenURL(appleMapsURL) {
-                UIApplication.shared.open(appleMapsURL, options: [:], completionHandler: nil)
-                return
-            }
-        }
-    }
 }
+
+
 
 struct RestaurantDetailView_Previews: PreviewProvider {
     static var previews: some View {

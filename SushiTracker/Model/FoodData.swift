@@ -19,4 +19,8 @@ class FoodData: ObservableObject {
     func addFoodItem(_ foodItem: MyFoodItem) {
         foodItems.append(foodItem)
     }
+    
+    func deleteFoodItem(at offsets: IndexSet) {
+        foodItems.remove(atOffsets: offsets)
+    }
 }
